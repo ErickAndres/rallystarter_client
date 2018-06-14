@@ -1,20 +1,32 @@
 <template>
   <div id="app">
-    <!--Add nav component-->
-    <!--Add header component-->
-    <img src="./assets/logo.png">
+    <!-- REQUIRED: Add nav component-->
+    <navbar></navbar>
+    <!-- OPTIONAL: Add site header component-->
     <!-- Add so that route components are rendered in <App /> -->
     <router-view/>
 
-    <!--Add footer component-->
+    <!-- REQUIRED: Add footer component-->
   </div>
 </template>
 
 <script>
-export default {
+  /**
+   * Main
+   * @desc - The main component that loads all parts of the app.
+   * Things like headers, footers, navigation should live here as well as:
+   *  - Auth
+   *  - State
+   */
+  import 'materialize-css';
+  import 'materialize-css/dist/css/materialize.css';
+  import Navbar from './components/Navbar';
+
+  export default {
   // This is the name the element will be called in the browser.
   // It defaults to the name of the module, App(.vue)
   name: 'App',
+  components: { Navbar },
 };
 </script>
 
@@ -24,7 +36,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

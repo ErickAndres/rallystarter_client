@@ -2,6 +2,14 @@
 
 > Frontend Vue ap for use with Rally Starter API
 
+## Developers
+
+__View Structure__:
+
+- Main (`App`): Nav, Footer
+- Home: Header, Search, RallyList
+- RallyForm (component): A form for creating a rally.
+
 ## Build Setup
 
 ``` bash
