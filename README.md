@@ -4,11 +4,40 @@
 
 ## Developers
 
-__View Structure__:
+An overview of the app structure and recommendations for development.
 
-- Main (`App`): Nav, Footer
-- Home: Header, Search, RallyList
-- RallyForm (component): A form for creating a rally.
+Request access to credentials from project lead(s).
+
+__Resources:__
+* [ERDs]()
+* [Mockups]()
+* [Test server]()
+* [API Docs]()
+* [Style Guide]()
+
+### Client Structure
+
+Below is a list of pages (components) and all the components they should have.
+- App: Navbar, Footer
+- Home component: Header.vue, Search.vue, RallyList.vue
+- RallyForm: A form for creating a rally. Target.vue, Action.vue, Event.vue, Rally.vue
+
+### Workflow
+
+Developing new content and features for the client is fairly straight-forward. Use a component driven approach, supported by technical mockups.
+
+First, create a technical mockup for the layout of a new page. In it:
+- Breakdown each section of the page
+- Identify the components that make it up
+
+From there, begin creating each individual component. Create new visual aids as necessary from that point.
+- Identify test cases
+- Write unit tests as necessary for each component.
+- Frequently commit to a feature branch for testing on test server (if available)
+
+Once all the components are created, begin adding them to the new page.
+- Create integration tests as necessary.
+
 
 ## Build Setup
 
