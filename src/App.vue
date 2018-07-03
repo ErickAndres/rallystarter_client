@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- REQUIRED: Add nav component-->
     <navbar></navbar>
 
