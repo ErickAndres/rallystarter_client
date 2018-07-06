@@ -33,9 +33,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## Development Tips
 
-An overview of the app structure and recommendations for development.
+An overview of the app structure and recommendations for development. All code changes should be based on the `develop` branch. It's the branch used to integrate all changes for a release.
 
-Request access to credentials from project lead(s).
+Request access to credentials from project lead(s) as needed.
 
 __Resources:__
 * [ERDs/Technical Diagrams](https://www.dropbox.com/sh/3tloq9k7lwvd93s/AABOeQRViL_qlET9SyT04bdWa?dl=0)
@@ -43,6 +43,9 @@ __Resources:__
 * [Test server](https://mcrallytest.herokuapp.com/)
 * [API Docs](https://rallystarter.docs.apiary.io/)
 * [Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)
+* [How to Document](http://usejsdoc.org/about-getting-started.html)
+
+The test server is a live server where you can manually test features.
 
 ### Client Structure
 
