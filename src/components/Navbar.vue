@@ -1,9 +1,10 @@
 <template>
-  <nav class="teal accent-2">
+  <nav class="white">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><img src="../assets/rs_logo.svg"></a>
+      <a href="/" class="brand-logo"><img src="../assets/rs_logo.svg"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Discover</a></li>
+        <li><router-link to="/start">Start a Rally</router-link></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">Signup</a></li>
       </ul>
@@ -28,7 +29,7 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
 }
 img {
   display: block;
@@ -36,5 +37,11 @@ img {
   width: 125px;
   max-width: 100%;
   height: auto;
+}
+a{
+  color: #4a4a4a;
+}
+a:hover{
+  text-decoration: underline teal;
 }
 </style>

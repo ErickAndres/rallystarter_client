@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Checkbox - Completed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1_Price" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-544.000000, -670.000000)">
+        <g id="Group-2" transform="translate(544.000000, 665.000000)">
+            <g id="Checkbox---Completed" transform="translate(0.000000, 5.000000)">
+                <rect id="Rectangle-7" fill="#4CEFCE" x="0" y="0" width="30" height="30" rx="15"></rect>
+                <polygon id="Path" fill="#FFFFFF" points="13.1043956 20.7692308 6.92307692 14.678872 8.66620879 12.9613908 13.1043956 17.3220877 22.4876374 8.07692308 24.2307692 9.80658497"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

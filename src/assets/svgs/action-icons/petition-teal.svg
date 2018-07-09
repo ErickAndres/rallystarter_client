@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="40px" viewBox="0 0 39 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>RS_Petitions_Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="How-It-Works-(For-Individuals)-022218" transform="translate(-933.000000, -902.000000)" fill="#076F8A">
+            <g id="RS_Petitions_Icon" transform="translate(933.000000, 902.000000)">
+                <path d="M30,3 L29.2608696,3 L30,1.71978853 L30,3 Z M27,6.91594096 L27,25.1307034 L27,6.91594096 Z M30,25.934551 L30,40 L0,40 L0,0 L27.5288188,0 L25.796768,3 L3,3 L3,37 L27,37 L27,31.1307034 L30,25.934551 Z" id="Combined-Shape"></path>
+                <rect id="Rectangle-8" x="6" y="6" width="16" height="3"></rect>
+                <rect id="Rectangle-8" x="6" y="12" width="13" height="3"></rect>
+                <rect id="Rectangle-8" x="6" y="18" width="10" height="3"></rect>
+                <path d="M15.8971143,22.3384573 L7.89711432,17.8384573 L15.8971143,13.3384573 L43.8971143,13.3384573 L43.8971143,22.3384573 L15.8971143,22.3384573 Z M18.8971143,16.0384573 L18.8971143,19.6384573 L40.8971143,19.6384573 L40.8971143,16.0384573 L18.8971143,16.0384573 Z" id="Combined-Shape" transform="translate(25.897114, 17.838457) rotate(-60.000000) translate(-25.897114, -17.838457) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

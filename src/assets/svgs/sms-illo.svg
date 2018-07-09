@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="455px" height="292px" viewBox="0 0 455 292" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>sms illustration_Ind</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="289" height="80" rx="10.9859155"></rect>
+        <rect id="path-2" x="0" y="0" width="289" height="80" rx="10.9859155"></rect>
+    </defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="How-It-Works-(For-Individuals)-022218" transform="translate(-766.000000, -2687.000000)">
+            <g id="sms-illustration_Ind" transform="translate(766.000000, 2687.000000)">
+                <g id="Group-26" transform="translate(89.000000, 0.000000)" fill="#4CEFCE" fill-rule="nonzero" opacity="0.184556159">
+                    <polygon id="Shape" transform="translate(69.726855, 208.500000) scale(1, -1) translate(-69.726855, -208.500000) " points="69.7029674 128 139.453709 168.226113 139.453709 248.773887 69.7029674 289 0 248.773887 0 168.226113"></polygon>
+                    <polygon id="Shape-Copy" transform="translate(145.726855, 80.500000) scale(1, -1) translate(-145.726855, -80.500000) " points="145.702967 0 215.453709 40.2261128 215.453709 120.773887 145.702967 161 76 120.773887 76 40.2261128"></polygon>
+                    <polygon id="Shape-Copy-2" transform="translate(295.726855, 80.500000) scale(1, -1) translate(-295.726855, -80.500000) " points="295.702967 0 365.453709 40.2261128 365.453709 120.773887 295.702967 161 226 120.773887 226 40.2261128"></polygon>
+                    <polygon id="Shape-Copy-2" transform="translate(219.726855, 211.500000) scale(1, -1) translate(-219.726855, -211.500000) " points="219.702967 131 289.453709 171.226113 289.453709 251.773887 219.702967 292 150 251.773887 150 171.226113"></polygon>
+                </g>
+                <g id="Group-24" transform="translate(0.000000, 51.000000)">
+                    <g id="Group-4-Copy-2">
+                        <g id="Rectangle-12-Copy-4">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <rect stroke="#F0F0F0" stroke-width="2" x="1" y="1" width="287" height="78" rx="10.9859155"></rect>
+                        </g>
+                        <rect id="Rectangle-8-Copy-6" fill="#F0F0F0" opacity="0.5" x="22" y="22" width="245" height="12" rx="5"></rect>
+                        <rect id="Rectangle-8-Copy-20" fill="#F0F0F0" opacity="0.5" x="22" y="46" width="245" height="12" rx="5"></rect>
+                    </g>
+                    <g id="Group-4-Copy-3" transform="translate(121.000000, 111.000000)">
+                        <g id="Rectangle-12-Copy-4">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <rect stroke="#F0F0F0" stroke-width="2" x="1" y="1" width="287" height="78" rx="10.9859155"></rect>
+                        </g>
+                        <rect id="Rectangle-8-Copy-6" fill="#F7F7F7" x="22" y="22" width="245" height="12" rx="5"></rect>
+                        <rect id="Rectangle-8-Copy-20" fill="#F7F7F7" x="22" y="46" width="245" height="12" rx="5"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

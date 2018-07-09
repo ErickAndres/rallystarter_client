@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>RS_Events_Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="How-It-Works-(For-Individuals)-022218" transform="translate(-220.000000, -902.000000)" fill="#076F8A">
+            <g id="RS_Events_Icon" transform="translate(220.000000, 902.000000)">
+                <g id="Group-19" fill-rule="nonzero">
+                    <path d="M0,4 L40,4 L40,39.2 L0,39.2 L0,4 Z M3.2,7.2 L3.2,36 L36.8,36 L36.8,7.2 L3.2,7.2 Z" id="Combined-Shape"></path>
+                    <g id="Group-18" transform="translate(8.800000, 0.000000)">
+                        <rect id="Rectangle-12" x="0" y="0" width="3.2" height="11.2"></rect>
+                        <rect id="Rectangle-12" x="19.2" y="0" width="3.2" height="11.2"></rect>
+                        <rect id="Rectangle-12" x="9.6" y="0" width="3.2" height="11.2"></rect>
+                    </g>
+                </g>
+                <polygon id="1" points="19.18 30.2 19.18 19.18 16.76 19.18 16.76 16 22.72 16 22.72 30.2"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

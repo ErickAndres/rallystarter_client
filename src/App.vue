@@ -8,6 +8,7 @@
     <router-view/>
 
     <!-- REQUIRED: Add footer component-->
+
   </div>
 </template>
 
@@ -32,11 +33,19 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*text-align: center;*/
   margin-top: 60px;
+  font-size: 16px;
+}
+*{
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #4a4a4a;
+  line-height: 1.5;
 }
 </style>
