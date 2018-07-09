@@ -29,7 +29,7 @@ To submit code, use Pull Requests. They should be used for basically all changes
 
 - Base your changes on the `develop` branch
 - Fork this repository and then submit a pull requests (PR) to submit changes.
-- Ask another contributors to review and merge your PRs.
+- Ask another contributor to review and merge your PRs.
 - Run the tests before submitting a PR and make them pass
 - Lint before submitting a PR. Aim for a score of at least 7
 - Never store sensitive credentials in the repository
@@ -43,9 +43,11 @@ All code changes should be submitted via PRs. Squash commits. PRs should have 1 
 __Commit message format__
 Before submitting a pull request, create a good commit message for your changes. The message will become the title and description of your PR later.
 
+Issue types are either a `Fix` (update old stuff) or `Feature` (add new stuff).
+
 * ISSUE_TYPE ISSUE_NUMBER -- Description of the work done*</br>
     - Example: `Fix #269 -- Adjust button width on contact form`
-* Add a detailed description to your commit. Include references to related issues
+* Add a detailed description to your commit. Include references to other related issues
 
 __Pull Request Format__
 - Title: Same as commit message above.
