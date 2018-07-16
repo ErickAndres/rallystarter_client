@@ -2,7 +2,8 @@
   <div>
     <div class="container">
       <h4>If you lead, they'll follow</h4>
-      <h5>Rally Starter is free but we recommend organizations Pro or Enterprise Rally for additional benefits.</h5>
+      <h5>Rally Starter is free but we recommend organizations
+      Pro or Enterprise Rally for additional benefits.</h5>
     </div>
     <div class="actionSection">
       <div v-for="card in cards"

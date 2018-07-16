@@ -1,11 +1,15 @@
 <template>
   <div class="container">
-    <page-header></page-header>
+    <PageHeader></PageHeader>
+    <Quote></Quote>
+    <Advocacy></Advocacy>
   </div>
 </template>
 
 <script>
 import PageHeader from '../components/Header';
+import Quote from '../components/Callout';
+import Advocacy from '../components/Advocacy';
 
 /**
  * Homepage
@@ -20,7 +24,7 @@ export default {
     };
   },
   name: 'HomePage',
-  components: { PageHeader },
+  components: { PageHeader, Quote, Advocacy },
 };
 </script>
 
