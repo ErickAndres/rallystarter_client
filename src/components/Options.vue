@@ -20,9 +20,9 @@
               </li>
             </ul>
         </div>
-        <div>
+        <router-link to="/start/step2">
           <button>{{card.action}}</button>
-        </div>
+        </router-link>
         <p>{{card.extraInfo}}</p>
       </div>
     </div>
@@ -114,6 +114,7 @@ img{
 button{
   width: 100%;
   position: absolute;
+  color: #51556C;
   bottom: 0;
   font-size: 20px;
   border: none;
@@ -143,4 +144,5 @@ div{
 .container{
   max-width: 68rem;
 }
+
 </style>

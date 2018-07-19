@@ -63,7 +63,7 @@ Componets are organized by object. Each component contains:
 * Javascript code
 * CSS styling
 
-...all in the same file. This coupling is intentional to make development transparent, fast and simple. 
+...all in the same file. This coupling is intentional to make development transparent, fast and simple.
 
 Materialize CSS is also included in the app. Use this to create a responsive site. You can learn more about it in [the documentation](https://materializecss.com).
 

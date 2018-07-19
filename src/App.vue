@@ -48,4 +48,7 @@ export default {
   color: #4a4a4a;
   line-height: 1.5;
 }
+body{
+  color: #4a4a4a;
+}
 </style>
