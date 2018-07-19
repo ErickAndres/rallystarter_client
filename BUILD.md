@@ -8,7 +8,7 @@ First, create a release from the develop branch and update staging with the new 
 
 Next, update heroku:
 
-1. Switch to `heroku` branch and roll back the 'Heroku dist' commit
+1. Switch to `heroku` branch
 2. Rebase it on `staging`
 3. `npm run build`
 4. Remove `dist` from `.gitignore`
