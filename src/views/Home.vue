@@ -1,11 +1,17 @@
 <template>
-  <div class="container">
-    <page-header></page-header>
+  <div>
+    <PageHeader></PageHeader>
+    <SearchBar></SearchBar>
+    <Quote></Quote>
+    <Advocacy></Advocacy>
   </div>
 </template>
 
 <script>
 import PageHeader from '../components/Header';
+import Quote from '../components/Callout';
+import Advocacy from '../components/Advocacy';
+import SearchBar from '../components/SearchBar';
 
 /**
  * Homepage
@@ -20,7 +26,7 @@ export default {
     };
   },
   name: 'HomePage',
-  components: { PageHeader },
+  components: { PageHeader, Quote, Advocacy, SearchBar },
 };
 </script>
 

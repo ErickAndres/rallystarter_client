@@ -23,6 +23,9 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+nav{
+  padding: 0.5rem;
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -34,14 +37,17 @@ li {
 img {
   display: block;
   /*height: 50px;*/
-  width: 125px;
-  max-width: 100%;
+  width: 100px;
   height: auto;
+  margin: 0.2rem 5rem 0.8rem;
 }
 a{
   color: #4a4a4a;
 }
 a:hover{
   text-decoration: underline teal;
+}
+.white{
+  padding: 0.4rem 0;
 }
 </style>

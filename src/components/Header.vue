@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <div class="col l5">
+  <div class="headerContainer">
+    <div class="headerDetail">
       <h1>{{ callout }}</h1>
-      <h2>{{ detail }}</h2>
+      <p>{{ detail }}</p>
     </div>
-    <div class="col l5">
+    <div class="statementImage">
       <img class="responsive-img" src="../assets/home-hero-lg.png" alt="">
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'PageHeader',
   data() {
@@ -23,6 +24,34 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-
+<style scoped>
+h1{
+  color: #2F6D87;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.headerContainer{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+p{
+  font-size: 1.4rem;
+}
+.headerDetail{
+  margin: 5%;
+  width: 60%;
+}
+.statementImage{
+  width: 90%;
+}
+/*.h1 {*/
+/*  float:left;*/
+/*}*/
+/*.h2 {*/
+/*  float:left;*/
+/*}*/
+/*.responsive-img {*/
+/*  float:right;*/
+/*}*/
 </style>

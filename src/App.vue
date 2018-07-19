@@ -8,7 +8,7 @@
     <router-view/>
 
     <!-- REQUIRED: Add footer component-->
-
+    <PageFooter></PageFooter>
   </div>
 </template>
 
@@ -23,12 +23,13 @@
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.css';
 import Navbar from './components/Navbar';
+import PageFooter from './components/Footer';
 
 export default {
   // This is the name the element will be called in the browser.
   // It defaults to the name of the module, App(.vue)
   name: 'App',
-  components: { Navbar },
+  components: { Navbar, PageFooter },
 };
 </script>
 
