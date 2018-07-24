@@ -4,7 +4,7 @@
       <a href="/" class="brand-logo"><img src="../assets/rs_logo.svg"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Discover</a></li>
-        <li><router-link to="/start">Start a Rally</router-link></li>
+        <li><router-link to="/start/step1">Start a Rally</router-link></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">Signup</a></li>
       </ul>

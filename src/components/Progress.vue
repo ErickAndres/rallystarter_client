@@ -1,8 +1,9 @@
 <template>
   <div class="status">
     <div v-for="step in steps" :key="step.id">
-      <router-link to="/start">
-        <div class="stepsBar" v-bind:class="{currentStep: step.active}">
+      <router-link :to="step.link" exact class="stepsBar">
+      <!-- Toggles the status of the hex icon depending on the step.-->
+        <div v-on:click="changeStatus(step)">
             <div class="hex">{{ step.stepNumber }}</div>
             <p>{{ step.title }}</p>
         </div>
@@ -23,14 +24,14 @@ export default {
           heading: 'If you lead, they\'ll follow',
           info: 'Rally Starter is free but we recommend organizations Pro or Enterprise Rally for additional benefits.',
           active: true,
-          link: '/start',
+          link: '/start/step1',
         },
         {
           stepNumber: 2,
           title: 'Overview',
           heading: 'Ready Set... Rally',
           info: 'Get started by describing your Rally\'s goal and purpose.',
-          active: '',
+          active: false,
           link: '/start/step2',
         },
         {
@@ -38,7 +39,7 @@ export default {
           title: 'Actions',
           heading: 'Build Out Your Rally',
           info: 'To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.',
-          active: '',
+          active: false,
           link: '/start/step3',
         },
         {
@@ -46,10 +47,13 @@ export default {
           title: 'Review',
           heading: 'Ready to Rally?',
           info: 'This is the last step. We promise.',
-          active: '',
+          active: false,
           link: '/start/step4',
         },
       ],
+      changeStatus: function(step) {
+        step.active = !step.active;
+      },
     };
   },
 };
@@ -64,12 +68,15 @@ export default {
 .hex{
   background-image: url("../assets/svgs/ui/hex-outline.svg");
   background-repeat:no-repeat;
-  height: 80px;
+  height: 5rem;
+  width: 4rem;
   background-position: center;
-  padding: 25px;
   font-size: 1.5em;
   font-weight: 600;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .stepsBar{
   width: 20%;
@@ -86,7 +93,7 @@ export default {
   display: flex;
   justify-content: space-around;
 }
-.currentStep{
+.router-link-exact-active{
   opacity: 1;
 }
 .stepsBar:hover{

@@ -6,12 +6,12 @@
       <div>
         <label for="title">Write Your Rally Title</label>
         <p>Grab people's attention with a title that describes your campaign goal.</p>
-        <input placeholder="Rally Title" id="title"/>
+        <input type="text" class="formInput" placeholder="Rally Title" id="title"/>
       </div>
       <div>
         <label for="summary">Write Your Rally Summary</label>
         <p>Write 2-3 sentences about why you need to act now.</p>
-        <input placeholder="Rally Summary" id="summary"/>
+        <input type="text" class="formInput" placeholder="Rally Summary" id="summary"/>
       </div>
       <div>
         <h6>Rally Details</h6>
@@ -52,12 +52,12 @@
       <div>
         <label for="videoLink">Have a Video?</label>
         <p>Add Youtube Video URL. This is optional and will replace your Rally Image.</p>
-        <input placeholder="URL" id="videoLink"/>
+        <input type="text" class="formInput" placeholder="URL" id="videoLink"/>
       </div>
     </form>
     <div class="actionButtons">
-      <button class="backButton">Back</button>
-      <button class="btn-main">Save and Continue</button>
+      <router-link to="/start/step1"><button class="backButton">Back</button></router-link>
+      <router-link to="/start/step3"><button class="btn-main">Save and Continue</button></router-link>
     </div>
   </div>
 </template>
@@ -66,10 +66,9 @@
 
 
 export default {
-  name: 'FormStep2',
+  name: 'RallyFormStep2',
   data() {
     return {
-
     };
   },
 };
@@ -119,7 +118,7 @@ label{
   color: #4a4a4a;
   font-weight: 600;
 }
-input{
+input.formInput{
   border-radius: 5px;
   border: 1.5px solid #f0f0f0;
   padding: .5rem;

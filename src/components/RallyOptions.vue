@@ -6,25 +6,25 @@
       Pro or Enterprise Rally for additional benefits.</h5>
     </div>
     <div class="actionSection">
-      <div v-for="card in cards"
-          :key="card.id" class="cardOption"
-          v-bind:class="{highlight: card.extraInfo}">
+      <div v-for="option in rallyoptions"
+          :key="option.id" class="cardOption"
+          v-bind:class="{highlight: option.extraInfo}">
         <div>
-          <h2>{{card.membershipType}}</h2>
+          <h2>{{option.membershipType}}</h2>
         </div>
-        <div class="eachCard">
-          <p>{{card.cost}}</p>
+        <div class="eachCardOption">
+          <p>{{option.cost}}</p>
             <ul>
-              <li v-for="feature in card.features" :key="feature.id" class="listFeatures">
+              <li v-for="feature in option.features" :key="feature.id" class="listFeatures">
                 <img src="../assets/svgs/checkbox-green.svg"/>
                 <span>{{feature}}</span>
               </li>
             </ul>
         </div>
         <router-link to="/start/step2">
-          <button>{{card.action}}</button>
+          <button>{{option.action}}</button>
         </router-link>
-        <p>{{card.extraInfo}}</p>
+        <p>{{option.extraInfo}}</p>
       </div>
     </div>
   </div>
@@ -32,10 +32,10 @@
 
 <script>
 export default {
-  name: 'Cards',
+  name: 'RallyOptions',
   data() {
     return {
-      cards: [
+      rallyoptions: [
         {
           membershipType: 'Starter Rally',
           cost: 'Free Forever',
@@ -85,11 +85,11 @@ h2{
   font-weight: 600;
   padding: 2rem 0;
 }
-.eachCard{
+.eachCardOption{
   font-size: 1.25em;
   padding: 0 1.5rem 1rem;
 }
-.eachCard p{
+.eachCardOption p{
   padding-bottom: 1 rem;
 }
 
