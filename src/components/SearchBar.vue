@@ -8,7 +8,7 @@
     <img src="../assets/svgs/error-icons/ice-cream-cone.svg" class="icecreamCone"/>
     <p>Sorry, none found. Try updating the categories or search term.</p>
     <h5>Don't See What You're Looking For?</h5>
-    <router-link to="/start"><button class="startRally">Start a Rally</button></router-link>
+    <router-link to="/start/step1"><button class="startRally">Start a Rally</button></router-link>
   </section>
 </template>
 

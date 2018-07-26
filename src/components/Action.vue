@@ -7,7 +7,11 @@
       </div>
       <label for="sendInfo">Send to:</label>
       <!-- On enter the Form Expands -->
+<<<<<<< HEAD
+      <input type="text" class="formInput" placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
+=======
       <input type="text" class="formInput"placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
+>>>>>>> 054ad1146346ff2de3b36951714eeb6c66e2e0c0
     </section>
     <div v-show="actionForm">
       <ActionDetails></ActionDetails>
