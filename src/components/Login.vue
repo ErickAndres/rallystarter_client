@@ -14,9 +14,9 @@
       <div>
         <form>
           <label>Email</label>
-          <input type="text" placeholder="user@example.com" class="formInput">
+          <input type="text" placeholder="user@example.com" class="formInput" v-model="credentials.email">
           <label>Password</label>
-          <input type="password" placeholder="Enter Password" class="formInput">
+          <input type="password" placeholder="Enter Password" class="formInput" v-model="credentials.password">
           <a href="">Forgot your password?</a>
           <button class="loginButton">Login</button>
         </form>
@@ -27,15 +27,23 @@
 </template>
 
 <script>
+
 export default {
   name: 'Login',
-  data() {
+  data () {
     return {
-    };
+      credentials: {
+        email: '',
+        password: '',
+      },
+      error: '',
+      }
   },
-  props: [],
-};
+  methods: {
+  }
+}
 </script>
+
 
 <style scoped>
 input.formInput{

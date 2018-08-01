@@ -6,8 +6,9 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#">Discover</a></li>
           <li><router-link to="/start/step1">Start a Rally</router-link></li>
-          <li><a href="#" v-on:click="loginModal = true" >Login</a></li>
-          <li><a href="#" v-on:click="signupModal = true">Signup</a></li>
+          <li><a href="#" @click="loginModal = true" >Login</a></li>
+          <li><a href="#" @click="signupModal = true">Signup</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
       </div>
     </nav>
@@ -36,6 +37,8 @@ export default {
       loginModal: false,
       signupModal: false,
     };
+  },
+  methods: {
   },
 };
 </script>

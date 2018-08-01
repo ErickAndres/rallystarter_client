@@ -6,6 +6,8 @@ import RallyFormStep2 from '@/components/RallyFormStep2';
 import RallyFormStep3 from '@/components/RallyFormStep3';
 import RallyFormStep4 from '@/components/RallyFormStep4';
 import RallyOptions from '@/components/RallyOptions';
+import Login from '@/components/Login';
+import Signup from '@/components/Signup';
 
 Vue.use(Router);
 
@@ -26,6 +28,16 @@ export default new Router({
         { path: 'step3', name: 'step3', component: RallyFormStep3 },
         { path: 'step4', name: 'step4', component: RallyFormStep4 },
       ],
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: Signup,
     },
   ],
 });

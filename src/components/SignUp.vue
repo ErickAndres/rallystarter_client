@@ -16,11 +16,11 @@
       <div>
         <form>
           <label>Email</label>
-          <input type="text" placeholder="user@example.com" class="formInput">
+          <input type="text" placeholder="user@example.com" class="formInput" v-model="credentials.email">
           <label>Password</label>
-          <input type="password" placeholder="Enter Password" class="formInput">
+          <input type="password" placeholder="Enter Password" class="formInput" v-model="credentials.password">
           <label>Confirm Password</label>
-          <input type="password" placeholder="Enter your password again" class="formInput">
+          <input type="password" placeholder="Enter your password again" class="formInput" v-model="credentials.confirmPassword">
           <input type="checkbox"/><label class="policy">I agree to Rally Starter's Terms of Use, Privacy Policy, and Copyright Policy.</label>
           <button class="signupButton">Join</button>
         </form>
@@ -34,6 +34,11 @@ export default {
   name: 'SignUp',
   data() {
     return {
+      credentials: {
+        email: '',
+        password: '',
+        confirmPassword: ''
+      }
     };
   },
   props: [],
