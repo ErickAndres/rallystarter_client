@@ -16,13 +16,13 @@
       <div>
         <form>
           <label>Email</label>
-          <input type="text" placeholder="user@example.com" class="formInput" v-model="credentials.email">
+          <input type="text" placeholder="user@example.com" class="formInput" v-model="email">
           <label>Password</label>
-          <input type="password" placeholder="Enter Password" class="formInput" v-model="credentials.password">
+          <input type="password" placeholder="Enter Password" class="formInput" v-model="password">
           <label>Confirm Password</label>
-          <input type="password" placeholder="Enter your password again" class="formInput" v-model="credentials.confirmPassword">
+          <input type="password" placeholder="Enter your password again" class="formInput" v-model="password_confirmation">
           <input type="checkbox"/><label class="policy">I agree to Rally Starter's Terms of Use, Privacy Policy, and Copyright Policy.</label>
-          <button class="signupButton">Join</button>
+          <button class="signupButton" @click="register">Join</button>
         </form>
       </div>
     </div>
@@ -30,18 +30,27 @@
 </template>
 
 <script>
+import AuthenticationService from '@/services/AuthenticationService'
+
 export default {
   name: 'SignUp',
   data() {
     return {
-      credentials: {
         email: '',
         password: '',
-        confirmPassword: ''
-      }
+        password_confirmation: ''
     };
   },
-  props: [],
+  methods: {
+    async register () {
+    console.log(this.email)
+      const response = await AuthenticationService.register({
+        email: this.email,
+        password: this.password,
+        password_confirmation: this.password_confirmation
+      })
+    }
+  }
 };
 </script>
 

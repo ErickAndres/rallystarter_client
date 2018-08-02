@@ -14,11 +14,11 @@
       <div>
         <form>
           <label>Email</label>
-          <input type="text" placeholder="user@example.com" class="formInput" v-model="credentials.email">
+          <input type="text" placeholder="user@example.com" class="formInput" v-model="email">
           <label>Password</label>
-          <input type="password" placeholder="Enter Password" class="formInput" v-model="credentials.password">
+          <input type="password" placeholder="Enter Password" class="formInput" v-model="password">
           <a href="">Forgot your password?</a>
-          <button class="loginButton">Login</button>
+          <button class="loginButton" @click="login">Login</button>
         </form>
       </div>
     </div>
@@ -27,19 +27,23 @@
 </template>
 
 <script>
-
+import AuthenticationService from '@/services/AuthenticationService'
 export default {
   name: 'Login',
   data () {
     return {
-      credentials: {
         email: '',
         password: '',
-      },
-      error: '',
       }
   },
   methods: {
+    async login () {
+    console.log(this.email)
+      const response = await AuthenticationService.login({
+        email: this.email,
+        password: this.password
+      })
+    }
   }
 }
 </script>

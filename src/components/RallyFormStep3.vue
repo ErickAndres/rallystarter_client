@@ -14,9 +14,8 @@
             <label for="summary">Add more actions and targets</label>
             <p>Adding more actions and targets improves your Rally's success.</p>
           </div>
-          <button v-on:click="addMoreAction">Add More</button>
+          <button>Add More</button>
         </div>
-        <Action v-show="visibilityStatus"></Action>
       </div>
       <div>
         <div class="sidebyside">
