@@ -60,7 +60,7 @@ h4{
   font-size: 1.5rem;
 }
 .startRally{
-  background: #E7612C;
+  background: #f95607;
   color: white;
   border: 2px solid  #E7612C;
   margin: 0 auto;

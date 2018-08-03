@@ -32,7 +32,7 @@ export default {
           heading: 'Ready Set... Rally',
           info: 'Get started by describing your Rally\'s goal and purpose.',
           active: false,
-          link: '/start/step2',
+          link: '/start/step1',
         },
         {
           stepNumber: 2,
@@ -40,7 +40,7 @@ export default {
           heading: 'Build Out Your Rally',
           info: 'To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.',
           active: false,
-          link: '/start/step3',
+          link: '/start/step2',
         },
         {
           stepNumber: 3,
@@ -48,7 +48,7 @@ export default {
           heading: 'Ready to Rally?',
           info: 'This is the last step. We promise.',
           active: false,
-          link: '/start/step4',
+          link: '/start/step3',
         },
       ],
       changeStatus: function(step) {
