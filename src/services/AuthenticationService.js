@@ -19,6 +19,15 @@ export default {
             console.log(response);
           })
     .catch(err => console.log(err))
+  },
+  newsletter (credentials) {
+    console.log(credentials)
+    axios
+    .post('newsletters', credentials)
+    .then((response) => {
+            console.log(response);
+          })
+    .catch(err => console.log(err))
   }
 }
 //Example

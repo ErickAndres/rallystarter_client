@@ -18,16 +18,16 @@ export default {
   data() {
     return {
       steps: [
-        {
+        /*{
           stepNumber: 1,
           title: 'Price',
           heading: 'If you lead, they\'ll follow',
           info: 'Rally Starter is free but we recommend organizations Pro or Enterprise Rally for additional benefits.',
           active: true,
           link: '/start/step1',
-        },
+        },*/
         {
-          stepNumber: 2,
+          stepNumber: 1,
           title: 'Overview',
           heading: 'Ready Set... Rally',
           info: 'Get started by describing your Rally\'s goal and purpose.',
@@ -35,7 +35,7 @@ export default {
           link: '/start/step2',
         },
         {
-          stepNumber: 3,
+          stepNumber: 2,
           title: 'Actions',
           heading: 'Build Out Your Rally',
           info: 'To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.',
@@ -43,7 +43,7 @@ export default {
           link: '/start/step3',
         },
         {
-          stepNumber: 4,
+          stepNumber: 3,
           title: 'Review',
           heading: 'Ready to Rally?',
           info: 'This is the last step. We promise.',

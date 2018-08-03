@@ -20,9 +20,9 @@
       </div>
       <form class="column_footer">
         <h3 class='footer_title'>For Updates & Inspiration</h3>
-        <input type="text" placeholder="Name" class="formInput" />
-        <input type="email" placeholder="Email" class="formInput"/>
-        <button>Subscribe</button>
+        <input type="text" placeholder="Name" class="formInput" v-model="name"/>
+        <input type="email" placeholder="Email" class="formInput" v-model="email"/>
+        <button @click="newsletterSubmit">Subscribe</button>
       </form>
       <div class="social">
         <a href="https://www.facebook.com/rallystarter" target="_blank"><img src="../assets/svgs/facebookCircle.svg" class="facebook"/></a>
@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import AuthenticationService from '@/services/AuthenticationService'
 /* eslint-disable */
 export default {
   name: 'PageFooter',
@@ -53,9 +54,20 @@ export default {
         {title: 'Contact'},
         {title: 'Resources'},
         {title: 'Policies'},
-      ]
+      ],
+      name: '',
+      email: '',
     };
   },
+  methods: {
+    async newsletterSubmit () {
+    console.log(this.email)
+      const response = await AuthenticationService.newsletter({
+        name: this.name,
+        email: this.email
+      })
+    }
+  }
 };
 </script>
 
