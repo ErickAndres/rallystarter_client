@@ -7,7 +7,7 @@
       </div>
       <label for="sendInfo">Send to:</label>
       <!-- On enter the Form Expands -->
-      <input type="text" class="formInput"placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
+      <input type="text" class="formInput" placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
     </section>
     <div v-show="actionForm">
       <ActionDetails></ActionDetails>
@@ -65,6 +65,14 @@ section button{
 #sendInfo{
   width: 91%;
   margin: 3% 2%;
+}
+@media screen and (max-width : 720px){
+  #sendInfo{
+    width: 85%;
+  }
+  section{
+    font-size: 0.9rem;
+  }
 }
 
 </style>

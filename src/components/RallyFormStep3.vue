@@ -1,59 +1,52 @@
 <template>
   <div class="formContainer">
-    <h4>Build Out Your Rally</h4>
-    <h5>To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.</h5>
+    <h4>Ready to Rally?</h4>
+    <h5>This is the last step. We promise.</h5>
     <form>
-      <div>
-        <label>Add A Primary Action and Target</label>
-        <p>Start with the most important action for supporters to take, along with all the targets associated with it.</p>
-        <Action></Action>
+      <div class="sidebyside">
+        <div>
+          <label>Choose a start date</label>
+          <p>Today? Tomorrow? In the year 3021?</p>
+        </div>
+        <input type="date" placeholder="Add Event" class="startDate formInput"/>
       </div>
-      <div class="moreAction">
-        <div class="sidebyside">
+      <div class="rallyType">
+        <label>Finalize your Rally plan</label>
+        <section>
           <div>
-            <label for="summary">Add more actions and targets</label>
-            <p>Adding more actions and targets improves your Rally's success.</p>
+            <button>Starter Rally</button>
+            <p>Free Forever</p>
           </div>
-          <button v-on:click="addMoreAction">Add More</button>
-        </div>
-        <Action v-show="visibilityStatus"></Action>
-      </div>
-      <div>
-        <div class="sidebyside">
           <div>
-            <label>Add an event</label>
-            <p>Organize your supporters, online and in real-life.</p>
+            <button>Pro Rally</button>
+            <p>Free 30 day Trial!</p>
+            <p>$49/month</p>
           </div>
-          <!-- On Click on the button the Detailed Events Form expands -->
-          <button v-on:click="eventForm= !eventForm">Add Event</button>
-        </div>
-        <div v-show="eventForm">
-          <Event></Event>
-        </div>
+          <div>
+            <button>Enterprise Rally</button>
+            <p>$499/month & up</p>
+          </div>
+        </section>
       </div>
     </form>
     <div class="actionButtons">
       <router-link to="/start/step2"><button class="backButton">Back</button></router-link>
-      <router-link to="/start/step4"><button class="btn-main">Save and Continue</button></router-link>
+      <router-link to=""><button class="btn-main">Submit for Review</button></router-link>
+    </div>
+    <div class="footnote">
+      <p>We recommend you <a href="">Preview Your Rally</a></p>
+      <img src="../assets/svgs/finger-pointing-up.svg"/>
+      <p>Your raly won't be public until the start date, and until it's been approved</p>
     </div>
   </div>
 </template>
 
 <script>
 
-import Action from '@/components/Action';
-import Event from '@/components/Event';
-
 export default {
-  name: 'RallyFormStep3',
-  components: { Action, Event },
+  name: 'FormStep3',
   data() {
     return {
-      sendTo: '',
-      visibilityStatus: false,
-      eventForm: false,
-      addMoreAction: function() {
-      },
     };
   },
 };
@@ -81,22 +74,23 @@ form{
   border-bottom: 2px solid #f0f0f0;
   padding: 2.5rem 0;
 }
-h6{
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 1rem;
-  color: #f0f0f0;
-  margin-bottom: 2.5rem;
+section{
+  display: flex;
+  padding: 2rem 0;
 }
-
+section input{
+  width: 75%;
+  text-align: center;
+}
 label{
   font-size: 1.8rem;
   color: #4a4a4a;
   font-weight: 600;
 }
-input{
+input.formInput{
   border-radius: 5px;
   border: 1.5px solid #f0f0f0;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 button{
   border: 2px solid #f0f0f0;
@@ -105,8 +99,12 @@ button{
   padding: 1.15rem 4rem;
 }
 section button{
-  margin: 2.5%;
+  margin: 0.5rem 1rem 0.5rem 0;
   padding: 0.5rem 2rem;
+}
+section button:hover,section button:focus {
+  background: #2F6E87;
+  color: white;
 }
 .btn-main{
   background: #f95607;
@@ -121,20 +119,51 @@ section button{
   justify-content: space-between;
   margin: 2rem 0;
 }
-.moreAction{
-  margin: 5rem 0;
-  border-bottom: 2px solid #f0f0f0;
-  border-top: 2px solid #f0f0f0;
-  padding: 3rem 0;
+p{
+  text-align: center;
+  font-size: 0.9rem;
+  color: #979797;
 }
 .sidebyside{
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-
 }
 .sidebyside button{
   margin: .5rem 1rem;
+}
+.startDate{
+  width: 40%;
+}
+.footnote{
+  width: 40%;
+  margin-left: 60%;
+}
+img{
+  display: block;
+  margin: 0 auto;
+}
+.rallyType{
+  border-top: 2px solid #f0f0f0;
+  padding: 3rem 0;
+}
+a{
+  color: #979797;
+  text-decoration: underline;
+}
+@media screen and (max-width : 800px){
+  .formContainer{
+    width: 80%;
+  }
+}
+@media screen and (max-width : 515px){
+  .actionButtons{
+    font-size: 0.9rem;
+  }
+  .btn-main{
+    padding: 1.2rem 2rem;
+    border: 2px solid #E7612C;
+  }
 }
 
 </style>

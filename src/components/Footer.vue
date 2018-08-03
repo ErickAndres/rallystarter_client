@@ -5,7 +5,7 @@
       <div class="column_footer">
           <h3 class='footer_title'>Overview</h3>
             <ul>
-                <li v-for='overview_link in overview_links' v-bind:key="overview_link">
+                <li v-for='overview_link in overview_links' :key="overview_link.id">
                     <p>{{overview_link.title}}</p>
                 </li>
             </ul>
@@ -13,17 +13,21 @@
       <div class="column_footer">
           <h3 class='footer_title'>Help</h3>
           <ul>
-              <li v-for='help_link in help_links' v-bind:key="help_link">
+              <li v-for='help_link in help_links' :key="help_link.id">
                   <p>{{help_link.title}}</p>
               </li>
           </ul>
       </div>
       <form class="column_footer">
         <h3 class='footer_title'>For Updates & Inspiration</h3>
-        <input placeholder="Name" />
-        <input placeholder="Email" />
-        <button>Subscribe</button>
+        <input type="text" placeholder="Name" class="formInput" v-model="name"/>
+        <input type="email" placeholder="Email" class="formInput" v-model="email"/>
+        <button @click="newsletterSubmit">Subscribe</button>
       </form>
+      <div class="social">
+        <a href="https://www.facebook.com/rallystarter" target="_blank"><img src="../assets/svgs/facebookCircle.svg" class="facebook"/></a>
+        <a href="https://twitter.com/rallystarters" target="_blank"><img src="../assets/svgs/twitterCircle.svg" class="twitter"/></a>
+      </div>
       <div>
 
       </div>
@@ -32,6 +36,7 @@
 </template>
 
 <script>
+import AuthenticationService from '@/services/AuthenticationService'
 /* eslint-disable */
 export default {
   name: 'PageFooter',
@@ -49,9 +54,20 @@ export default {
         {title: 'Contact'},
         {title: 'Resources'},
         {title: 'Policies'},
-      ]
+      ],
+      name: '',
+      email: '',
     };
   },
+  methods: {
+    async newsletterSubmit () {
+    console.log(this.email)
+      const response = await AuthenticationService.newsletter({
+        name: this.name,
+        email: this.email
+      })
+    }
+  }
 };
 </script>
 
@@ -73,7 +89,7 @@ img{
   height: 5rem;
   margin: 0 5rem;
 }
-input, button{
+input, button, input.formInput{
   border: 2px solid #F0F0F0;
   border-radius: 5px;
 }
@@ -83,7 +99,7 @@ button{
   width: 70%;
   padding: .7rem;
 }
-input{
+input.formInput{
   padding: 0 5%;
   color: black;
 }
@@ -96,5 +112,35 @@ h3{
 }
 form h3{
   margin-bottom: 3rem;
+}
+.social{
+  display: flex;
+}
+.facebook{
+  margin: 1rem;
+  width: 50%;
+}
+.twitter{
+  margin: 1rem;
+  width: 23%;
+}
+
+@media screen and (max-width : 800px){
+  .wrap{
+    flex-direction: column;
+    margin-left: 3%;
+  }
+  input.formInput{
+    width: 50%;
+  }
+  button{
+  width: 30%;
+  }
+  footer{
+    font-size: 1rem;
+  }
+  img{
+    margin: 0;
+  }
 }
 </style>

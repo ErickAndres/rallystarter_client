@@ -51,5 +51,6 @@ export default {
 }
 body{
   color: #4a4a4a;
+  font-size: 16px;
 }
 </style>
