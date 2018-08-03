@@ -34,7 +34,66 @@
       <a href="">Progress</a>
     </div>
     <section>
+      <h3>More Actions</h3>
+      <form class="moreAction">
+        <div>
+          <h4>Paul D. Ryan</h4>
+        </div>
+        <a href="">Email</a>
+        <div>
+          <label>Subject *</label>
+          <input placeholder="Remove Nunes" class="formInput"/>
+          <label>Message *</label>
+          <textarea class="formInput">Devin Nunes recused himself from the investigation in April after the news came out that he was secretly meeting at the White House after hours to discuss the investigation with the very people he was supposed to be investigating.
 
+  Following Nunes' recusal, you stated your support for his recusal because of his conflict of interest serving on Trump's transition team.
+
+  Nunes' actions have disgraced the House Intelligence Committee and present a danger to national security. Please act to remove Nunes and protect our nation.</textarea>
+          <label>Your Email *</label>
+          <input type="email" class="formInput"/>
+          <label>Your first name *</label>
+          <input type="text" class="formInput"/>
+          <label>Your last name *</label>
+          <input type="text" class="formInput"/>
+          <label>Prefix</label>
+          <input type="email" class="formInput" placeholder="Ms."/>
+          <label>Phone *</label>
+          <input type="number" class="formInput"/>
+          <p>Topics are required when emailing congress. Please select the topic(s) that most closely aligns with the rally.</p>
+        </div>
+          <button>Email</button>
+          <p>Paul D. Ryan</p>
+        <div>
+        </div>
+
+      </form>
+    </section>
+    <section>
+      <h3>Contact Influencers to Apply Pressure</h3>
+      <form class="moreAction">
+        <div>
+          <h4>Congressional Legislators</h4>
+        </div>
+        <a href="">Call</a>
+          <h4>Phone Script</h4>
+          <p>Hello, my name is [your name] and I'm calling on you to pressure House Speaker Paul Ryan to enforce Devin Nunes' recusal from the Trump Russia investigation.</p>
+          <h4>Important talking points</h4>
+          <ol>
+            <li>Devin Nunes recused himself from the investigation in April after the news came out that he was secretly meeting at the White House after hours to discuss the investigation with the very people he was supposed to be investigating.</li>
+            <li>Since April's recusal, Rep Nunes has continued to serve as the Chairman of the House Intelligence Committee and has actively attempted to undermine Mueller's investigation. This conflict of interest can not continue any longer.</li>
+            <li>It’s time to demand that House Speaker Paul Ryan remove Nunes as chair of the House Intelligence Committee.</li>
+          </ol>
+          <p>Don't see your congress members above? <a href="">Click here</a> to find or select them.</p>
+        <div>
+        </div>
+      </form>
+    </section>
+    <section class="progressSection">
+      <h4>Progress</h4>
+      <div>
+        <p class="valign-wrapper">By tracking actions and sharing progress with the team, we know we are a part of something bigger than ourselves. Keep taking action and recruiting more supporters to join the rally!</p>
+        <img src="../assets/placeholder-chart.png" class="placeholder-chart"/>
+      </div>
     </section>
     <aside>
       <h2>Action Checklist</h2>
@@ -79,10 +138,14 @@ button{
   color: #979797;
   padding: 1.15rem 4rem;
 }
-input.formInput{
+input.formInput, textarea.formInput{
   border-radius: 5px;
   border: 1.5px solid #f0f0f0;
   padding: 0.5rem 1rem;
+}
+textarea.formInput{
+  width: 100%;
+  height: 15rem;
 }
 form{
   width: 30%;
@@ -113,4 +176,18 @@ header{
 .sticky-nav{
   border: 2px solid #f0f0f0;
 }
+form.moreAction{
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  padding: 2.5rem 0;
+  width: 60%;
+}
+.placeholder-chart{
+  width: 50%;
+  height: 100%;
+}
+.progressSection div{
+  display: flex;
+}
+
 </style>
