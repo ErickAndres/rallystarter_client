@@ -56,5 +56,16 @@ export default {
 .right_col img{
   height: 100%;
 }
-
+@media screen and (max-width : 720px){
+  .quote_container{
+    flex-direction: column;
+  }
+  .left-col {
+    width: 90%;
+  }
+  .right_col img{
+    display: block;
+    margin: 0 auto;
+  }
+}
 </style>
