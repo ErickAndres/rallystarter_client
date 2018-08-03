@@ -54,4 +54,29 @@ p{
 /*.responsive-img {*/
 /*  float:right;*/
 /*}*/
+@media screen and (max-width : 800px){
+  .headerContainer{
+      width: 100%;
+  }
+}
+@media screen and (max-width : 720px){
+  .headerContainer{
+    flex-direction: column-reverse;
+  }
+  .responsive-img{
+    display: none;
+  }
+  .statementImage{
+    background-image: url('../assets/home-hero-lg.png');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: none;
+    transform: none;
+    height: 350px;
+    width: 100%;
+  }
+  .headerDetail{
+    width: 90%;
+  }
+}
 </style>
