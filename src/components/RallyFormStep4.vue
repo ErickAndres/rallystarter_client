@@ -101,9 +101,8 @@ button{
 section button{
   margin: 0.5rem 1rem 0.5rem 0;
   padding: 0.5rem 2rem;
-  width: 12rem;
 }
-section button:hover{
+section button:hover,section button:focus {
   background: #2F6E87;
   color: white;
 }
@@ -151,5 +150,10 @@ img{
 a{
   color: #979797;
   text-decoration: underline;
+}
+@media screen and (max-width : 720px){
+  .formContainer{
+    width: 80%;
+  }
 }
 </style>

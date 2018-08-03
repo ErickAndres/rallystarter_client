@@ -155,7 +155,7 @@ section div div{
 
 [type="checkbox"].check{
   border: 1.5px solid #989898;
-  background: #79F1CC;
+  background: #79F1CC !important;
 }
 #imageUploader{
   margin: 2rem 0;
@@ -165,5 +165,10 @@ section div div{
   text-align: center;
   color: #979797;
   border: 1.5px solid #f0f0f0;
+}
+@media screen and (max-width : 720px){
+  .formContainer{
+    width: 80%;
+  }
 }
 </style>

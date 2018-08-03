@@ -189,5 +189,7 @@ form.moreAction{
 .progressSection div{
   display: flex;
 }
-
+h2{
+  font-size: 1.25rem;
+}
 </style>

@@ -101,7 +101,7 @@ button{
   border: 2px solid #f0f0f0;
   border-radius: 5px;
   color: #979797;
-  padding: 1.15rem 4rem;
+  padding: 1.15rem 3rem;
 }
 section button{
   margin: 2.5%;
@@ -134,6 +134,14 @@ section button{
 }
 .sidebyside button{
   margin: .5rem 1rem;
+}
+@media screen and (max-width : 720px){
+  .formContainer{
+    width: 80%;
+  }
+  input{
+    width: 50%;
+  }
 }
 
 </style>

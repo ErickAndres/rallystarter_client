@@ -96,4 +96,12 @@ button{
   border: 2px solid  #E7612C;
   padding: 2% 5%;
 }
+@media screen and (max-width : 720px){
+  section{
+    flex-direction: column-reverse;
+  }
+  .left_side, .right_side{
+    width: 100%;
+  }
+}
 </style>

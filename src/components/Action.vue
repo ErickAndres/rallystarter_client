@@ -66,5 +66,13 @@ section button{
   width: 91%;
   margin: 3% 2%;
 }
+@media screen and (max-width : 720px){
+  #sendInfo{
+    width: 85%;
+  }
+  section{
+    font-size: 0.9rem;
+  }
+}
 
 </style>
