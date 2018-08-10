@@ -8,11 +8,14 @@
     </div>
     <div class="wrapper">
       <div class="card" v-for='(rally, index) in rallies.data'>
-      	<!--<img :src="rally.image_url" />-->
-      	<div class="rally_text">{{rally.total_actions}} Actions</div>
-      	<img class="img-with-text" v-bind:src="rally.image_url"/>
-      	<p class="rally_text">{{rally.title}}</p>
+        <div class="rally_text">{{rally.total_actions}} Actions</div>
+        <img class="img-with-text" v-bind:src="rally.image_url"/>
+        <p class="rally_text">{{rally.title}}</p>
       </div>
+    </div>
+    <div class="align-right">
+      <button class="btn-ui">Show More</button>
+      <div class="show_more">Showing 6 of 52</div>
     </div>
     <img src='../assets/svgs/error-icons/ice-cream-cone.svg' class='icecreamCone'/>
     <p>Sorry, none found. Try updating the categories or search term.</p>
@@ -192,34 +195,17 @@ h5{
   text-align: center;
   margin: 5% 0 2%;
 }
-/** {*/
-/*    box-sizing: border-box;*/
-/*}*/
 .wrapper {
   max-width: 68rem;
   display: flex;
-  /*max-width: 444px;*/
   flex-wrap: wrap;
   padding-top: 12px;
-  /*width: 800px; can be bigger but the space in between them is too little*/
-  /*width: 33.33333%;*/
 }
 .card {
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-  /*max-width: 200px;*/
   margin: 12px;
   width: 30%;
-  /*width: 240px;*/
-  /*height: 240px;*/
   flex-direction: column;
-  /*max-height: 300px;*/
-  /*position: relative;*/
-}
-/* NOT BEING USED*/ 
-.card_image {
-  height: 100px;
-  position: relative;
-  vertical-align: bottom;
 }
 .rally_text {
   font-size: 10px;
@@ -227,48 +213,33 @@ h5{
 }
 .img-with-text {
     text-align: justify;
-    /*width: 150px;*/
     max-width:100%;
     max-height:100%;
 }
 
 .img-with-text img {
-    /*max-width:100%;*/
-    /*max-height:100%;*/
     display: block;
     margin: 0 auto;
 }
-/*div#app {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  flex-direction: column;*/
-/*}*/
-
-/** {*/
-/*  box-sizing: border-box;*/
-/*}*/
-/*.py-3 {*/
-/*    padding-top: 2rem;*/
-/*    padding-bottom: 2rem;*/
-/*}*/
-/*.py-1 {*/
-/*    padding-top: .5rem;*/
-/*    padding-bottom: .5rem;*/
-/*}*/
-/*.m-neg-1 {*/
-/*    margin: -.5rem;*/
-/*}*/
-/*.container {*/
-/*    max-width: 68rem;*/
-/*}*/
-/*.flex-wrap {*/
-/*    -ms-flex-wrap: wrap;*/
-/*    flex-wrap: wrap;*/
-/*}*/
-/*.flex {*/
-/*    display: -webkit-box;*/
-/*    display: -ms-flexbox;*/
-/*    display: flex;*/
-/*}*/
+.align-right {
+    padding-top: 12px;
+}
+.show_more {
+  position: absolute; 
+  right: 11%;
+  color: grey;
+  font-size: .75rem;
+  padding-top: 60px;
+}
+.btn-ui {
+    position: absolute; 
+    right: 11%;
+    color: #686868;
+    background: #f7f7f7;
+    border-color: #f0f0f0;
+    width: 130px;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
 </style>
