@@ -1,0 +1,100 @@
+:root {
+  --grey: #686868;
+  --grey-medium: #d8d8d8;
+  --grey-medium-light: #f0f0f0;
+  --grey-light: #f7f7f7;
+
+  --night: #3b3e4f;
+
+  /* used over images so that white text is more readable */
+  --scrim: rgba(0,0,0,0.5);
+
+  /* khaki (used mostly for input borders) */
+  --khaki: #E2E5D0; 
+  --khaki-light: color(var(--khaki) lightness(93%)); 
+
+  /* main brand color */
+  --green: #39f5ca;
+
+  /* used often for metrics and buttons */
+  --orange: #F95607;
+  --orange-dark: #da4a07;
+  
+  /* used for rally card category indicator */
+  --jade: #5BCBBC;
+  --teal: #076F8A;
+
+  /* used for label text color */
+  --purple: #50556e;
+
+  /* used as a bg for sections on discover, front and rally pages */
+  --sky: #e4e9f1;
+
+  /* used for .heavy-underline */
+  --green-light: color(var(--green) l(85%)); 
+
+  /* social branding */ 
+  --facebook: #3B5998; 
+  --twitter: #00ABF1;
+  --linkedin: #0077B5;
+  --tumblr: #287A9B;
+}
+
+body {
+  color: #4a4a4a;
+}
+
+/* color utility classes */
+.bg-white { background-color: white; }
+.bg-white-scrim { background-color: rgba(255,255,255,0.9); }
+.bg-grey-light { background-color: var(--grey-light); }
+.bg-green-light { background-color: var(--green-light); }
+.bg-grey-medium { background-color: var(--grey-medium); }
+.bg-grey-medium-light { background-color: var(--grey-medium-light); }
+.bg-night { background-color: var(--night); }
+.bg-scrim { background-color: var(--scrim); }
+.bg-khaki-light { background-color: var(--khaki-light); }
+.bg-sky { background-color: var(--sky); }
+.bg-purple { background-color: var(--purple); }
+
+/* these bg colors are mostly used for the pricing cards */
+.bg-orange { background-color: var(--orange); }
+.bg-green { background-color: var(--green); }
+
+/* only use for styling social link backgrounds */
+.bg-facebook { background-color: var(--facebook); }
+.bg-twitter { background-color: var(--twitter); }
+.bg-linkedin { background-color: var(--linkedin); }
+.bg-tumblr { background-color: var(--tumblr); }
+
+.color-white { color: white; }
+
+/* green text is not very readable and should be avoided */
+/* it is mostly used to set the color of icons */
+.color-green { color: var(--green); }
+
+.color-grey { color: grey; }
+.color-orange { color: var(--orange); }
+.color-purple { color: var(--purple); }
+.color-night { color: var(--night); }
+.color-teal { color: var(--teal); }
+.color-jade { color: var(--jade); }
+
+.border,
+.border-top,
+.border-bottom,
+.border-right,
+.border-left {
+  border-width: 2px;
+  border-color: var(--grey-medium-light);
+}
+
+.border-color-purple { border-color: var(--purple)}
+.border-color-green { border-color: var(--green)}
+.border-color-orange { border-color: var(--orange)}
+.border-color-night { border-color: var(--night)}
+.border-color-khaki { border-color: var(--khaki)}
+.border-color-grey { border-color: var(--grey-medium)}
+
+.hover-bg-green-light:hover { background: var(--green-light)}
+.hover-bg-grey-light:hover { background: var(--grey-light)}

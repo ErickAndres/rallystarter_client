@@ -1,0 +1,59 @@
+.dropdown { position: relative; }
+
+.dropdown > div { cursor: pointer; }
+
+.dropdown ul {
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-.5rem);
+  transition: 150ms ease-out;
+  box-shadow: var(--sh-2);
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 8rem;
+}
+
+.dropdown li {
+  border-bottom: 2px solid var(--grey-light); 
+  margin: 0;
+}
+
+.dropdown li > * {
+  padding: .5rem;
+  font-size: .9rem;
+  width: 100%;
+  display: block;
+  color: black;
+}
+
+.dropdown li:last-of-type { border: none; }
+
+.dropdown ul a:hover { background: var(--green-light); }
+
+.dropdown ul a.no-events { background: var(--green-light); }
+
+.dropdown > div[is-open='t'] ~ ul,
+.dropdown ul.isOpen {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0rem);
+} 
+
+.dropdown-toggle:after {
+  content: "\E5D2"; /* menu icon */
+  font-family: 'Material Icons';
+  font-size: 1.75rem;
+}
+
+.dropdown-toggle[current-user='true']:after {
+  content: "\E853"; /* user icon */
+}
+
+@media (max-width: 30rem) {
+  .dropdown-toggle:after { font-size: 1.5rem; }
+}
+

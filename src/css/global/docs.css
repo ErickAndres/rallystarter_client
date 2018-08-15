@@ -1,0 +1,48 @@
+@import './colors';
+
+:root { 
+  --width-l: 18rem; 
+  --width-m: 16rem; 
+  --width-s: 14rem; 
+}
+
+.sideNav a { border-left: 3px solid transparent; }
+
+.sideNav a[data-active] { 
+  font-weight: 500;
+  border-color: var(--green);
+}
+
+.sideNav { 
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  width: var(--width-l); 
+}
+
+.content { padding-left: var(--width-l); }
+
+@media (max-width: 864px) {
+  .sideNav { width: var(--width-m); }
+  .content { padding-left: var(--width-m); }
+}
+
+@media (max-width: 720px) {
+  .sideNav { width: var(--width-s); }
+  .content { padding-left: var(--width-s); }
+}
+
+@media (max-width: 608px) {
+  .sideNav { 
+    width: 100%; 
+    position: relative;
+    padding-right: 1rem;
+    background: var(--grey-light);
+  }
+  .sideNav a { 
+    border-left: none;
+    text-decoration: underline;
+  }
+  .sideNav a[data-active] { font-weight: 400;}
+  .content { padding-left: 1rem; }
+}
+

@@ -1,0 +1,40 @@
+.pell {
+  width: 100%;
+}
+
+div.pell-content {
+  border-radius: 0;
+  min-height: 10rem;
+  outline: 0;
+  overflow-y: auto;
+  padding: 10px;
+  width: 100%;
+  border-top: none;
+  border-bottom: none;
+}
+div.pell-content:focus {
+  border-color: var(--khaki);
+}
+
+.pell-actionbar {
+  background-color: #FFF;
+  padding: 0.5rem;
+  background: var(--grey-light);
+  width: 100%;
+  border: 3px solid var(--khaki);
+  border-bottom: none;
+}
+
+.pell-button {
+  margin-right: 0.5rem;
+  border-color: var(--khaki);
+  background: white;
+}
+
+.pell-status {
+  border: 3px solid var(--khaki);
+  border-top: none;
+  background-color: var(--grey-light);
+  overflow: hidden;
+  padding: 0.5rem;
+}

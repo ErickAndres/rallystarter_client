@@ -1,0 +1,10 @@
+th {
+  font-weight: 500;
+}
+
+table,
+tr,
+td {
+  border-color: var(--grey-medium);
+}
+

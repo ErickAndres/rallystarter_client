@@ -1,0 +1,5 @@
+.msn > div:first-of-type {
+  width: calc(100% - 16px);
+  transform: translateX(8px);
+}
+

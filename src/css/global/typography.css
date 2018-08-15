@@ -1,0 +1,49 @@
+body { font-size: 16px; }
+
+a { 
+  color: inherit; 
+  text-decoration: none;
+}
+
+blockquote { font-size: 1rem; }
+
+p a { text-decoration: underline; }
+
+.wysiwyg-content a, 
+.pell-content a {
+  text-decoration: underline;
+  overflow-wrap: break-word;
+}
+
+.mono { font-family: var(--mono); }
+
+.x-large { font-size: 4.5rem; }
+.large { font-size: 4rem; }
+
+.bump { font-size: 1.25rem; }
+.sub { font-size: .9rem; }
+
+.bold, strong, h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+.boldest { font-weight: 600; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25 } 
+
+.kern-1 { letter-spacing: 1px; }
+
+
+
+@media (--break-md) {
+  .md-sub { font-size: .9rem; }
+  .md-bump { font-size: 1.25rem; }
+}
+
+@media (--break-sm) {
+  .sm-sub { font-size: .9rem; }
+  .sm-bump { font-size: 1.25rem; }
+  .x-large { font-size: 3.5rem; }
+  .large { font-size: 3rem; }
+  h1, .h1 { font-size: 2.5rem; }
+  h2, .h2 { font-size: 2.25rem; }
+  h3, .h3 { font-size: 1.75rem; }
+  h4, .h4 { font-size: 1.25rem; }
+}

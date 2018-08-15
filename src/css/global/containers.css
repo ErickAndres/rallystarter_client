@@ -1,0 +1,12 @@
+[class*="container"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--wide    { max-width: 78rem; }
+.container         { max-width: 68rem; }
+.container--medium-large { max-width: 55rem; }
+.container--medium { max-width: 50rem; }
+.container--narrow { max-width: 43rem; }
+.container--narrow-larger { max-width: 45.1rem; }
+

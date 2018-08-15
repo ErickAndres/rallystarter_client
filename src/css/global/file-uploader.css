@@ -1,0 +1,9 @@
+@import 'ff-file-uploader';
+@import 'cropper.css';
+@import 'colors.css';
+
+[data-ff-file-uploader] {
+  border: 3px dashed var(--khaki);
+  padding: 1em;
+}
+

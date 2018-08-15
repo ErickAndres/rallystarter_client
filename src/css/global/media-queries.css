@@ -1,0 +1,2 @@
+@custom-media --break-md (width <= 45em);
+@custom-media --break-sm (width <= 30em);

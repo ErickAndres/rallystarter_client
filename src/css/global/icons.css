@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Material Icons';
+  src: local('/fonts/material/MaterialIcons-Regular'),
+       url('/fonts/material/MaterialIcons-Regular.woff2') format('woff2'),
+       url('/fonts/material/MaterialIcons-Regular.woff') format('woff'),
+       url('/fonts/material/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Social Icons';
+  src: url('/fonts/social/social.eot');
+  src: url('/fonts/social/social.eot') format('embedded-opentype'),
+       url('/fonts/social/social.woff') format('woff'),
+       url('/fonts/social/social.ttf') format('truetype'),
+       url('/fonts/social/social.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Categories Icons';
+  src: url('/fonts/categories/categories.eot');
+  src: url('/fonts/categories/categories.eot') format('embedded-opentype'),
+       url('/fonts/categories/categories.woff') format('woff'),
+       url('/fonts/categories/categories.ttf') format('truetype'),
+       url('/fonts/categories/categories.svg') format('svg');
+}
+ 
+@font-face {
+  font-family: 'Targets Icons';
+  src: url('/fonts/targets/targets.eot');
+  src: url('/fonts/targets/targets.eot') format('embedded-opentype'),
+       url('/fonts/targets/targets.woff') format('woff'),
+       url('/fonts/targets/targets.ttf') format('truetype'),
+       url('/fonts/targets/targets.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Actions Icons';
+  src: url('/fonts/actions/actions.eot');
+  src: url('/fonts/actions/actions.eot') format('embedded-opentype'),
+       url('/fonts/actions/actions.woff') format('woff'),
+       url('/fonts/actions/actions.ttf') format('truetype'),
+       url('/fonts/actions/actions.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Allies Icons';
+  src: url('/fonts/allies/allies.eot');
+  src: url('/fonts/allies/allies.eot') format('embedded-opentype'),
+       url('/fonts/allies/allies.woff') format('woff'),
+       url('/fonts/allies/allies.ttf') format('truetype'),
+       url('/fonts/allies/allies.svg') format('svg');
+}
+
+/* reference: https://material.io/icons/ */
+.m-icon { font-family: 'Material Icons'; }
+[class*="categories-icon-"]:after { font-family: "Categories Icons"; }
+[class*="actions-icon-"]:after { font-family: "Actions Icons"; }
+[class*="targets-icon-"]:after { font-family: "Targets Icons"; }
+[class*="social-icon-"]:after { font-family: "Social Icons"; }
+[class*="allies-icon-"]:after { font-family: "Allies Icons"; }
+
+[class*="actions-icon-"]:after,
+[class*="categories-icon-"]:after,
+[class*="targets-icon-"]:after,
+[class*="social-icon-"]:after,
+[class*="allies-icon-"]:after,
+.m-icon {
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  vertical-align: middle;
+}
+
+[class*="actions-icon-"],
+[class*="targets-icon-"],
+[class*="categories-icon-"],
+[class*="allies-icon-"],
+[class*="social-icon-"] {
+  vertical-align: middle;
+}
+
+.actions-icon-boycott:after { content: '\e900'; }
+.actions-icon-email:after { content: '\e901'; }
+.actions-icon-letter:after { content: '\e901'; }
+.actions-icon-events:after { content: '\e902'; }
+.actions-icon-petition:after { content: '\e903'; }
+.actions-icon-call:after { content: '\e904'; }
+.actions-icon-pledge:after { content: '\e905'; }
+
+.actions-icon-tweet:after { content: '\e906'; }
+.actions-icon-social:after { content: '\e906'; }
+
+
+.targets-icon-ally:after { content: '\e900'; }
+.targets-icon-decision:after { content: '\e901'; }
+.targets-icon-influencer:after { content: '\e902'; }
+
+.categories-icon-paw:after { content: '\e900'; }
+.categories-icon-arts:after { content: '\e901'; }
+.categories-icon-teddy:after { content: '\e903'; }
+.categories-icon-ambulance:after { content: '\e904'; }
+.categories-icon-economy:after { content: '\e905'; }
+.categories-icon-cap:after { content: '\e906'; }
+.categories-icon-leaf:after { content: '\e908'; }
+.categories-icon-utensils:after { content: '\e90a'; }
+.categories-icon-apple:after { content: '\e90b'; }
+.categories-icon-aid:after { content: '\e90c'; }
+.categories-icon-lgbtq:after { content: '\e90d'; }
+.categories-icon-media:after { content: '\e90e'; }
+.categories-icon-safety:after { content: '\e911'; }
+.categories-icon-justice:after { content: '\e912'; }
+.categories-icon-veterans:after { content: '\e914'; }
+.categories-icon-women:after { content: '\e915'; }
+.categories-icon-politics:after { content: '\e907'; }
+.categories-icon-human:after { content: '\e902'; }
+
+.social-icon-tumblr:after { content: '\e800'; }
+.social-icon-twitter:after { content: '\f099'; } 
+.social-icon-facebook:after { content: '\f09a'; } 
+.social-icon-github:after { content: '\f09b'; }
+.social-icon-linkedin:after { content: '\f0e1'; } 
+.social-icon-youtube:after { content: '\f16a'; }
+.social-icon-instagram:after { content: '\f16d'; } 
+.social-icon-flickr:after { content: '\f16e'; } 
+.social-icon-google:after { content: '\f1a0'; } 
+.social-icon-vine:after { content: '\f1ca'; } 
+.social-icon-pinterest:after { content: '\f231';}
+.social-icon-whatsapp:after { content: '\f232'; }
+.social-icon-vimeo:after { content: '\f27d'; } 
+.social-icon-reddit:after { content: '\f281'; }
+.social-icon-snapchat:after { content: '\f2ac'; } 
+.social-icon-quora:after { content: '\f2c4'; } 
+
+.allies-icon-advocate:after { content: '\e900'; }
+.allies-icon-partner:after { content: '\e901'; }
+.allies-icon-press:after { content: '\e902'; }
+.allies-icon-supporters:after { content: '\e903'; }

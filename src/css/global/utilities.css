@@ -1,0 +1,110 @@
+.transX-1 { transform: translateX(.5rem); }
+.transX-2 { transform: translateX(1rem); }
+.transX-neg-1 { transform: translateX(-.5rem); }
+.transX-neg-2 { transform: translateX(-1rem); }
+
+.height-0 { height: 0; }
+
+.m-neg-2 { margin: -1rem; }
+
+.transition { transition: 150ms ease; }
+.transition-slow { transition: 400ms ease; }
+
+.scrim-absolute { position: relative; }
+
+.scrim-absolute:before {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--scrim);
+}
+.scrim-absolute > div:first-of-type {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-center { background-position: center; }
+
+.no-margin-last-field fieldset:last-of-type { margin: 0; }
+
+.child-inline-block > * { display: inline-block; }
+
+.width-initial { width: initial; }
+
+.width-1 { width: 7rem; }
+.width-2 { width: 20rem; }
+.width-minus-2 { width: calc(100% - 20rem); }
+
+.no-events {
+  pointer-events: none;
+  cursor: default;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.indent { text-indent: 1rem; }
+
+.pre-line { white-space: pre-line; }
+.pre-wrap { white-space: pre-wrap; }
+
+[data-fade='out'] {
+  transition: opacity 100ms ease;
+  opacity: 0;
+}
+
+[data-fade='in'] {
+  transition: opacity 200ms ease;
+  opacity: 1;
+}
+
+.hover-up:hover { transform: translateY(-3px) translateZ(0) }
+.hover-shadow {
+  transition: box-shadow .2s ease-in-out;
+}
+.hover-shadow:hover { 
+  box-shadow: var(--sh-5);
+}
+
+.hover-underline-parent:hover .hover-underline-child {
+  text-decoration: underline;
+}
+
+.fade-in { 
+  animation-name: fadein;
+  animation-duration: 400ms;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.max-height-full { max-height: 100%; }
+
+.width-inherit { width: inherit; }
+
+.li { 
+  display: list-item; 
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.border-width-3px {
+  border-width: 3px;
+}
+
+.top-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.text-shadow {
+  text-shadow: 0 0 2rem rgba(0,0,0,0.2);
+}

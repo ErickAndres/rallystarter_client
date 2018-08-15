@@ -1,0 +1,31 @@
+[data-ff-notification] {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--sh-2);
+  background: white;
+  border-top: .5rem solid var(--green);
+  font-weight: 500;
+  padding: .75rem;
+  font-size: 1.25rem;
+  z-index: 10;
+  left: 0; 
+  bottom: -50%; 
+  opacity: 0;
+  visibility: hidden;
+  transform: translateZ(0); 
+  transition: 200ms ease;
+  color: black;
+}
+
+
+[data-ff-notification=shown] {
+  opacity: 1;
+  visibility: visible;
+  bottom: 0;
+}
+
+@media (max-width: 30rem) {
+  [data-ff-notification] { font-size: .9rem; }
+}
+

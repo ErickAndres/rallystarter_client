@@ -1,0 +1,41 @@
+@import 'commons.css';   /* npm */ 
+@import 'media-queries.css'; /* contains variables */
+@import 'fonts.css'; /* contains variables */
+@import 'colors.css';  /* contains variables */
+@import 'shadows.css'; /* contains variables */
+@import 'media-queries.css';
+@import 'logo.css';
+@import 'typography.css';
+@import 'containers.css'; 
+@import 'utilities.css';
+@import 'buttons.css';
+@import 'modal.css';
+@import 'notification.css';
+@import 'nav-labels.css';
+@import 'decorative.css';
+@import 'form-elements.css';
+@import 'icons.css';
+@import 'wizard.css';
+@import 'pikaday.css';
+@import 'tooltip.css';
+@import 'loader.css';
+@import 'balloon.css';
+@import 'dropdown.css';
+@import 'table.css';
+@import 'confirmation.css';
+@import 'input-counter.css';
+@import 'text-editor.css';
+@import 'flexbox.css';
+@import 'pricing-card.css';
+@import 'rally-cards.css';
+
+/* for sticky footer */
+html { height: 100%; }
+body { 
+  min-height: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+.globalFooter { 
+  flex: 1; 
+}

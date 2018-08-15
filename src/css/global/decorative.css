@@ -1,0 +1,152 @@
+::selection {
+  color: white;
+  background: var(--night)
+}
+
+[data-ff-modal-header] h4,
+.heavy-underline {
+  background-image: linear-gradient(to right, var(--green-light), var(--green-light));
+  background-repeat: no-repeat,no-repeat,repeat-x;
+  background-position: 0 0.85em;
+  background-size: 100% 0.35em;
+  display: inline;
+  padding-left: .3em;
+  padding-right: .1em;
+  margin-left: -.3em;
+  margin-right: .1em;
+}
+
+/* used for pricing cards */
+.arrow-emphasis { position: relative; }
+.arrow-emphasis:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -1rem;
+  left: calc(50% - 1.5rem);
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 1rem solid var(--night);
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: var(--grey-medium);
+}
+
+/* used to control carousels */
+.dot {
+  cursor: pointer;
+  width: 1.5rem;
+  margin: .25rem .5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.social-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+.social-circle i {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.striped-children > *:nth-child(even) {
+  background-color: var(--grey-light);
+}
+
+.horizontal-gradient-scrim {
+  position: relative;
+}
+
+.horizontal-gradient-scrim:after,
+.horizontal-gradient-scrim:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 3em;
+  z-index: 1;
+}
+
+.horizontal-gradient-scrim:after {
+  left: 0;
+  background-image: linear-gradient(to right, var(--night), transparent);
+}
+
+.horizontal-gradient-scrim:before {
+  right: 0;
+  background-image: linear-gradient(to left, var(--night), transparent);
+}
+
+.border-width-05 { border-width: .25rem; }
+.border-width-3px { border-width: 3px; }
+
+.hover-accent { position: relative; }
+
+.hover-accent:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.hover-accent.no-events:after,
+.hover-accent:hover:after {
+  background: var(--green);
+}
+
+.no-child-hover-accent .hover-accent:after {
+  display: none;
+}
+
+.hex-outline {
+  background-image: url(/svgs/ui/hex-outline.svg);
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  line-height: 1;
+  font-size: .9rem;
+  padding: 1.3rem;
+}
+
+.append-arrow:after {
+  content: "\E313";
+  line-height: 1;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  padding-left: .5rem;
+  margin-right: -.5rem;
+  display: inline-block;
+  font-family: 'Material Icons';
+}
+
+.arrow-center:after {
+  content: "\E313";
+  line-height: 1;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: 'Material Icons';
+}
+
+.tabControl {
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.tabControl.active,
+.tabControl:hover {
+  opacity: 1;
+}
+

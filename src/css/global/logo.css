@@ -1,0 +1,19 @@
+[data-logo='green-grey-text'],
+[data-logo='green-white-text'] { 
+  width: 7rem 
+}
+
+[data-logo='green-no-text'] { width: 3rem }
+
+@media (max-width: 45rem) {
+  [data-logo='green-grey-text'],
+  [data-logo='green-white-text'] { 
+    width: 5.5rem 
+  }
+}
+
+@media (max-width: 30rem) {
+  [data-logo] img { content: url('/svgs/logos/green-no-text.svg') }
+  [data-logo] { width: 2.5rem }
+}
+

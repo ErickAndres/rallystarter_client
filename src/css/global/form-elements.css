@@ -1,0 +1,177 @@
+select,
+textarea,
+input[type='checkbox'] + label:before,
+input[type='radio'] + label:before,
+div[contenteditable="true"],
+input {
+  border: 2px solid var(--grey-medium-light);
+}
+
+select:focus,
+textarea:focus,
+div[contenteditable="true"]:focus,
+input:focus {
+  border-color: var(--green);
+}
+
+input.invalid,
+[data-ff-field-input='invalid'] {
+  border-color: color(var(--orange) lightness(70%));
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+} 
+
+select,
+textarea,div[contenteditable="true"],
+input {
+  border-radius: 5px;
+}
+
+select {
+  max-width: 100%;
+  width: initial;
+}
+
+label { 
+  font-size: 1.1em;
+  margin-bottom: .25rem; 
+}
+
+label,
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+  font-weight: 500;
+  color: var(--purple);
+}
+
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+  font-weight: 400;
+  position: relative;
+  padding-left: 1.75em;
+  font-size: .85rem;
+}
+
+input[type='radio'] + label:before,
+input[type='checkbox'] + label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\E876"; 
+  margin: 0 .5em 0 0;
+  font-family: 'Material Icons';
+  padding: 0;
+  width: 1em;
+  line-height: 1em;
+}
+
+input[type='checkbox'] + label:before {
+  border-radius: 2px;
+}
+
+input[type='radio'] + label:before { border-radius: 50%; }
+
+input[type='checkbox']:checked + label:before,
+input[type='radio']:checked + label:before { 
+  background: var(--green);
+  border-color: var(--jade);
+}
+
+input[type='radio']:checked + label:before { 
+  color: transparent;
+}
+
+input[type='checkbox']:checked + label:before {
+  color: white; 
+}
+
+.input-card,
+.input-calendar,
+.input-search,
+select {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+select {
+  background-image: url('/svgs/ui/dropdown.svg');
+  background-position-x: calc(100% - .25rem); 
+  padding-right: 2rem;
+}
+
+.combobox-input {
+  padding-right: 2rem;
+}
+
+.select-two-digit {
+  font-family: var(--mono);
+  width: 4rem;
+  padding-right: 0;
+}
+
+.input-calendar,
+.input-card {
+  background-position-x: calc(100% - .5rem); 
+}
+
+.input-calendar {
+  background-image: url('/svgs/ui/calendar.svg');
+  cursor: pointer;
+}
+
+.input-search {
+  background-image: url('/svgs/ui/search.svg');
+  background-position-x: .5rem; 
+  padding-left: 2.5rem;
+}
+
+.input-card {
+  background-size: 3rem;
+  padding-right: 4.25rem;
+}
+
+.input-card-number { background-image: url('/svgs/payment-icons/default.svg'); }
+.input-card-number[data-card-type='Visa'] { background-image: url('/svgs/payment-icons/visa.svg'); }
+.input-card-number[data-card-type='MasterCard'] { background-image: url('/svgs/payment-icons/mastercard.svg'); }
+.input-card-number[data-card-type='American Express'] { background-image: url('/svgs/payment-icons/amex.svg'); }
+.input-card-number[data-card-type='Discover'] { background-image: url('/svgs/payment-icons/discover.svg'); }
+.input-card-number[data-card-type='Diners Club'] { background-image: url('/svgs/payment-icons/diners.svg'); }
+.input-card-number[data-card-type='Maestro'] { background-image: url('/svgs/payment-icons/maestro.svg'); }
+
+.input-card-cvc { background-image: url('/svgs/payment-icons/security-code.svg'); }
+
+fieldset { border: none; }
+
+/* This also gets border and border-radius-styles above */
+div[contenteditable='true'] {
+  background: white;
+  padding: .5rem;
+}
+
+.fieldError,
+.caption {
+  font-size: .85rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.caption {
+  color: var(--purple);
+  margin-top: .25rem;
+  margin-bottom: 0;
+}
+
+.fieldError {
+  color: var(--orange);
+  margin: .25rem 0;
+  display: inline-block;
+  background: #f955060f;
+}
+
+@each $browser in (::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder) { 
+  $(browser) { color: rgba(0,0,0,0.45); }
+}
+

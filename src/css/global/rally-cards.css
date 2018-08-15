@@ -1,0 +1,10 @@
+@import './colors';
+
+.bg-teal { background-color: var(--teal); }
+.bg-jade { background-color: var(--jade); }
+.bg-purple { background-color: var(--purple); }
+
+.rally-card-teal p { color: var(--teal); }
+.rally-card-orange p { color: var(--orange); }
+.rally-card-jade p { color: var(--jade); }
+.rally-card-purple p { color: var(--purple); }

@@ -1,0 +1,49 @@
+.balloon-1,
+.balloon-2,
+.balloon-3 { 
+  opacity: 0.9;
+  transform: translateZ(0); 
+}
+
+.balloon-1 { animation: balloon-1 2000ms ease-in; }
+.balloon-2 { animation: balloon-2 2500ms ease-in; }
+.balloon-3 { animation: balloon-3 3000ms ease-in; }
+.balloon-4 { animation: balloon-4 3500ms ease-in; }
+
+@keyframes balloon-1 {
+  0% {transform: rotate(2deg)} 
+  25% {transform: rotate(0deg)} 
+  50% {transform: rotate(-2deg)} 
+  100% {
+    bottom: 100%;
+    transform: rotate(0deg);
+  } 
+}
+
+@keyframes balloon-2 {
+  0% {transform: rotate(-2deg)} 
+  40% {transform: rotate(0deg)} 
+  70% {transform: rotate(2deg)} 
+  100% {
+    bottom: 105%;
+    transform: rotate(0deg)
+  } 
+}
+
+@keyframes balloon-3 {
+  0% {transform: rotate(0deg)} 
+  60% {transform: rotate(2deg)} 
+  100% {
+    bottom: 110%;
+    transform: rotate(0deg)
+  } 
+}
+
+@keyframes balloon-4 {
+  0% {transform: rotate(2deg)} 
+  100% {
+    bottom: 120%;
+    transform: rotate(0deg)
+  }
+}
+

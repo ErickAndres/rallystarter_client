@@ -1,0 +1,77 @@
+@import 'snabbdom-pikaday';
+@import 'colors.css';
+
+:root {
+  --pik-border: 3px solid var(--grey-medium);
+}
+
+.pika-single.is-hidden {
+  display: none;
+}
+
+.pika-single {
+  font-family: Source Code Pro,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+}
+
+.pika-lendar {
+  width: 280px;
+  padding: 0;
+}
+
+.pika-title {
+  margin: .4rem 0;
+}
+
+.pika-label {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pika-table tr {
+  border-top: var(--pik-border); 
+}
+
+.pika-table th:not(:last-of-type),
+.pika-table td:not(:last-of-type) {
+  border-right: var(--pik-border); 
+}
+
+.pika-table thead th {
+  font-weight: 400;
+  font-size: .7rem;
+  line-height: 1;
+  padding: .5rem 0;
+  background: var(--grey-light);
+}
+
+.pika-button {
+  padding: .75rem 0;
+  line-height: 1;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.pika-single button:hover {
+  color: initial;
+  background-color: initial;
+}
+
+.is-today .pika-button {
+  background: var(--grey-light);
+}
+
+.is-selected.is-today .pika-button,
+.is-selected .pika-button {
+  background-color: var(--orange);
+  color: white;
+}
+
+.pika-single.is-bound {
+  border: var(--pik-border);
+  z-index: 10;
+  border-radius: 0;
+}

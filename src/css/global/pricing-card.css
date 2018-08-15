@@ -1,0 +1,41 @@
+@import './colors.css';
+
+.pricingCard {
+  width: 340px;
+  max-width: 340px;
+  padding: .5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 700px) {
+  .pricingCard {
+    width: 100%;
+  }
+}
+
+/* Pricing step */
+.pricingCard_button {
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 0;
+  background: var(--grey-light);
+  width: 100%;
+  padding: 1.5rem 1rem;
+  &:hover {
+    color: var(--purple);
+    background: var(--grey-medium-light);
+  }
+}
+
+.pricingCard_button--pro {
+  background: color(var(--orange));
+  color: white;
+  &:hover {
+    color: white;
+    background: var(--orange-dark);
+  }
+}
+

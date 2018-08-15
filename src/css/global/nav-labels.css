@@ -1,0 +1,122 @@
+/* This selects the anchor element for each label */
+[data-ff-tabswap-label] {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em 2em;
+}
+/* An active content section */
+[data-ff-tabswap-content='active'] {
+  display: block;
+}
+/* An inactive content section */
+[data-ff-tabswap-content='inactive'] {
+  display: none;
+}
+
+/* this file contains styles for: */
+/*   - ff-tabswap-label */
+/*   - top-nav-label */
+
+[data-ff-tabswap-label-wrapper] {
+  cursor: pointer;
+}
+
+[data-ff-tabswap-label],
+[data-ff-tabswap-labels] {
+  width: 100%;
+}
+
+[data-ff-tabswap-label-wrapper] {
+  display: inline-block; 
+}
+
+.multiTabswap-label,
+.nav-label,
+.tabswapLabelsWrapper [data-ff-tabswap-label] a,
+[data-ff-tabswap-label] {
+  text-align: center;
+  position: relative;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+[data-ff-tabswap-label] {
+  padding: 1rem .5rem;
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label] a,
+.nav-label {
+  padding: .75rem .5rem;
+}
+
+.multiTabswap-label {
+  padding-bottom: 0.125rem;
+  margin-bottom: 0.55rem;
+  margin-right: 1rem;
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label] {
+  padding: 0;
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label]:after {
+  display: none;
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label] a:after,
+.multiTabswap-label:after,
+.nav-label:after,
+[data-ff-tabswap-label]:after {
+  position: absolute;
+  content: '';
+}
+
+[data-ff-tabswap-label]:after {
+  width: 0; 
+  height: 0; 
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  bottom: -0.5px;
+  left: calc(50% - 12px);
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label] a:after,
+.multiTabswap-label:after,
+.nav-label:after {
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  height: 2px; 
+}
+
+.tabswapLabelsWrapper [data-ff-tabswap-label]:hover a:after,
+.multiTabswap-label:hover:after,
+.nav-label:hover:after,
+.tabswapLabelsWrapper [data-ff-tabswap-label='active'] a:after,
+.multiTabswap-label.active:after,
+.nav-label[data-active=true]:after {
+  background: var(--green);
+}
+
+.multiTabswap-label.active {
+  font-weight: bold;
+}
+
+[data-ff-tabswap-label='active']:after {
+  border-bottom: 8px solid var(--purple);
+}
+
+.color-white [data-ff-tabswap-label='active']:after {
+  border-bottom: 8px solid white; 
+}
+
+/* for disabling tabs on the actions sections for the rally page */
+[data-ff-tabswap-label-wrapper].disabled {
+  cursor: default;
+}
+
+a[data-ff-tabswap-label].disabled,
+a[data-ff-tabswap-label].disabled:hover {
+  opacity: 0.25;
+}
+

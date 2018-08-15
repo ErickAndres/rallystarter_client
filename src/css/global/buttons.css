@@ -1,0 +1,86 @@
+button,
+.btn {
+  border-width: 2px;
+  border-radius: 5px;
+  font-weight: 400;
+  padding: .5em 1.25em;
+  cursor: pointer;
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--purple);
+}
+
+[data-ff-confirmation-button="yes"]:hover,
+button:hover,
+.btn-orange.active,
+.btn:hover {
+  color: white;
+}
+
+[data-ff-confirmation-button="yes"]:hover,
+.btn-orange:hover,
+.btn-orange.active,
+.btn-orange.active:hover {
+  background-color: var(--orange);
+}
+
+[data-ff-confirmation-button="yes"],
+.btn-orange {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.btn-main {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+.btn-main:hover {
+  border-color: var(--orange-dark);
+  background: var(--orange-dark);
+}
+
+[data-ff-file-uploader-click-content] button,
+.btn-ui {
+  color: var(--grey);
+  background: var(--grey-light);
+  border-color: var(--grey-medium-light);
+}
+
+[data-ff-file-uploader-click-content]:hover button,
+.btn-ui:hover {
+  color: var(--grey);
+  background: var(--grey-medium-light);
+}
+
+.btn-ui.active {
+  color: white;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.btn-white {
+  border-color: white;
+  color: white;
+}
+ 
+[data-ff-button-error] {
+  margin: 0;
+}
+
+[data-ff-button-error='error'] {
+  color: var(--orange);
+  font-size: .9rem; 
+  margin-bottom: 1rem;
+}
+
+.btn-large {
+  font-size: 1.2rem;
+  max-width: 270px;
+  width: 100%;
+}

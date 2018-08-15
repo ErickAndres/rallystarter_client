@@ -1,0 +1,179 @@
+@import './shadows.css';
+
+/* The parent wrapper */
+[data-ff-modal] {
+  position: fixed;
+  width: 500px;
+  margin-left: -250px;
+  left: 50%;
+  background: white;
+  z-index: 2;
+}
+/* Shown and hidden states on the wrapper div */
+[data-ff-modal='shown'] {
+  display: block;
+}
+[data-ff-modal='hidden'] {
+  display: none;
+}
+
+/* Modal header and footer divs */
+[data-ff-modal-header],
+[data-ff-modal-footer] {
+  overflow: hidden;
+}
+/* The body div of the modal, where the content goes */
+[data-ff-modal-body] {
+  overflow: auto;
+}
+/* Shown and hidden states for the backdrop overlay */
+[data-ff-modal-backdrop='shown'] {
+  display: block;
+}
+
+[data-ff-modal-backdrop='hidden'] {
+}
+
+/* Styles for the backdrop overlay the modal */
+[data-ff-modal-backdrop] {
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  transition: opacity .2s ease-out, visibility .2s ease-out;
+  background: color(var(--night) alpha(60%));
+  z-index: 9;
+}
+
+[data-ff-modal-backdrop=hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[data-ff-modal-backdrop=shown] {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+[data-ff-modal] {
+  color: var(--grey);
+  box-shadow: var(--sh-2); 
+  overflow: auto;
+}
+
+[data-ff-modal-header] {
+  padding: 1rem 3rem 1rem 1rem;
+}
+
+[data-ff-modal-body],
+[data-ff-modal-footer] {
+  padding: 1rem;
+}
+
+[data-ff-modal-header],
+[data-ff-modal-footer] {
+  background: var(--grey-light);
+}
+
+[data-ff-modal-header] h4 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+[data-ff-modal-close-button] {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+[data-ff-modal-close-button]:after {
+  line-height: 1;
+  color: var(--purple);
+  cursor: pointer;
+  content: "\E5CD"; 
+  font-family: 'Material Icons';
+  font-size: 1.75rem;
+}
+
+[data-ff-modal] {
+  width: 40rem; 
+  margin-left: -20rem;
+}
+
+[data-ff-confirmation] [data-ff-modal],
+.modal-small [data-ff-modal] {
+  width: 30rem; 
+  margin-left: -15rem;
+}
+
+.modal-large [data-ff-modal] {
+  width: 50rem; 
+  margin-left: -25rem;
+}
+.modal-noPadding [data-ff-modal-body] {
+  padding: 0;
+}
+
+.modal-body-noscroll [data-ff-modal-body] {
+  overflow-y: hidden;
+}
+
+.modal-full [data-ff-modal] {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  left: 0;
+}
+
+.modal-full [data-ff-modal-body] {
+  flex: 2;
+}
+
+
+.flex-modal {
+  display: flex;
+  align-items: center;
+}
+
+.flex-modal [data-ff-modal] {
+  max-height: 100%;
+}
+
+@media (max-width: 50rem) {
+  .modal-large [data-ff-modal] {
+    width: calc(100% - 1rem); 
+    margin-left: -0.5rem; 
+    left: 1rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  [data-ff-modal] {
+    width: calc(100% - 1rem); 
+    margin-left: -0.5rem; 
+    left: 1rem;
+  }
+  [data-ff-confirmation] [data-ff-modal],
+  .modal-small [data-ff-modal] {
+    left: 50%;
+    width: 30rem; 
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  [data-ff-confirmation] [data-ff-modal],
+  .modal-small [data-ff-modal] {
+    width: calc(100% - 1rem); 
+    margin-left: -0.5rem; 
+    left: 1rem;
+  }
+}
+

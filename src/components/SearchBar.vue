@@ -6,16 +6,35 @@
       <input placeholder='Search for Rally by Title or summary'/>
       <button>All Categories<img src='../assets/svgs/ui/dropdown.svg' class='valign-wrapper'/></button>
     </div>
-    <div class="wrapper">
-      <div class="card" v-for='(rally, index) in rallies.data'>
-        <div v-bind:class="classBackground(rally.categories[0])">
-          <div class="topcard">{{rally.categories[0]}}</div>
-          <div class="topcard">{{rally.total_actions}} Actions</div>
+    <div class="py3">
+      <div class="py1">
+        <div class="flex flex-wrap">
+          <div class="card_container" v-for='(rally, index) in rallies.data'>
+            <a class="bg-white hover-shadow extra" href="/" title="example">
+              <div v-bind:class="classBackground(rally.categories[0])">
+                <div class="flex flex-align-center padding_inside">
+                  <div class="flex flex-align-center">
+                    <i class="categories-icon-justice icon_extra"></i>
+                    <div class="topcard">{{rally.categories[0]}}</div>
+                  </div>
+                </div>
+                <div class="custom_right">
+                  <div class="topright">{{rally.total_actions}}</div>
+                  <div class="topright"> Actions</div>
+                </div>
+              </div>
+              <!--<div class="rally_text">{{rally.total_actions}} Actions</div>-->
+              <!--<div class="aspect aspect-3x2">-->
+              <!--  <div class="img-with-text" style="background-image: url('rally.image_url');"></div>-->
+              <!--</div>-->
+              <div class="img_aspect">
+                <img class="img-with-text" v-bind:src="rally.image_url"/>
+              </div>
+              <p v-bind:class="classText(rally.categories[0])">{{rally.title}}</p>
+              <!--<p class="rally_text">{{rally.title}}</p>-->
+            </a>
+          </div>
         </div>
-        <!--<div class="rally_text">{{rally.total_actions}} Actions</div>-->
-        <img class="img-with-text" v-bind:src="rally.image_url"/>
-        <p v-bind:class="classText(rally.categories[0])">{{rally.title}}</p>
-        <!--<p class="rally_text">{{rally.title}}</p>-->
       </div>
     </div>
     <div class="align-right">
@@ -177,6 +196,16 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
+/* need index file which is node modules and looks like it is custom*/
+@import '../css/global/colors.css';
+@import '../css/global/containers.css';
+@import '../css/global/icons.css'; /* HERE */
+@import '../css/global/flexbox.css';
+@import '../css/global/rally-cards.css';
+/*@import '../css/global/page.css';*/
+@import '../css/global/typography.css';
+@import '../css/global/utilities.css';
+
 input, button{
   border: 2px solid #F0F0F0;
   border-radius: 5px;
@@ -216,6 +245,23 @@ p{
 h4{
   font-size: 1.5rem;
 }
+.py3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py1 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin: -.5rem;
+}
+
+.custom_right {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  font-size: .75rem;
+  text-transform: uppercase;
+}
 .startRally{
   background: #f95607;
   color: white;
@@ -228,34 +274,50 @@ h5{
   text-align: center;
   margin: 5% 0 2%;
 }
-.wrapper {
-  max-width: 68rem;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 12px;
+
+.card_container {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  width: 33.33333%;
 }
-.card {
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-  margin: 12px;
-  width: 30%;
+
+.extra {
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.1);
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.padding_inside {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.icon_extra {
+  line-height: 1;
+  display: inline-block;
+}
+
+.topcard {
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: .75rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  display: inline-block;
+}
+.img_aspect {
+  position: relative;
   flex-direction: column;
-}
-.rally_text {
-  font-size: 10px;
-  padding: 4px;
+  /*max-height: 227.55px;*/
 }
 .img-with-text {
     text-align: justify;
     max-width:100%;
     max-height:100%;
-}
-
-.img-with-text img {
-    display: block;
-    margin: 0 auto;
-}
-.align-right {
-    padding-top: 12px;
 }
 .show_more {
   position: absolute; 
@@ -275,33 +337,65 @@ h5{
     display: table-cell;
     vertical-align: middle;
 }
-.topcard {
-  text-transform: uppercase;
+.topright {
+  /*text-transform: uppercase;*/
   color: #fff;
+  /*font-size: .75rem;*/
+  /*display: block;*/
+  line-height: 1.25;
+  
 }
 .purplevue { 
   background-color: #800080;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: .5rem; 
+  padding-bottom: .5rem; 
 }
 .tealvue {
   background-color: #2F6D87;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: .5rem; 
+  padding-bottom: .5rem; 
 }
 .jadevue {
   background-color: #5bcbbc;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: .5rem; 
+  padding-bottom: .5rem; 
 }
 .orangevue {
   background-color: #f95607;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: .5rem; 
+  padding-bottom: .5rem; 
 }
 
 .purplevuep { 
   color: #800080;
+  /*border-top-style: solid;*/
+  margin: 0;
+  padding: 1rem;
 }
 .tealvuep {
   color: #2F6D87;
+  /*border-top-style: solid;*/
+  margin: 0;
+  padding: 1rem;
 }
 .jadevuep {
   color: #5bcbbc;
+  /*border-top-style: solid;*/
+  margin: 0;
+  padding: 1rem;
 }
 .orangevuep {
   color: #f95607;
+  /*border-top-style: solid;*/
+  margin: 0;
+  padding: 1rem;
 }
 </style>

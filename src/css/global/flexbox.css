@@ -1,0 +1,54 @@
+.flex { display: flex; }
+.flex-wrap {flex-wrap: wrap}
+.flex-column {flex-direction: column}
+
+@each $prop in (flex-start, flex-end, center, space-between, space-around, space-evenly) {
+  .flex-item-justify-$(prop) { justify-self: $(prop); }
+  .flex-justify-$(prop) { justify-content: $(prop); }
+}
+
+@each $prop in (auto, flex-start, flex-end, center, baseline, stretch) {
+  .flex-item-align-$(prop) { align-self: $(prop); }
+  .flex-align-$(prop) { align-items: $(prop); }
+}
+
+@for $i from 1 to 4 {
+  .flex-grow-$(i) { flex-grow: $(i)}
+  .flex-order-$(i) { order: $(i)}
+}
+
+@each $prop in (row, row-reverse, column, column-reverse) {
+  .flex-direction-$(prop) {
+    flex-direction: $(prop)
+  }
+}
+
+@each $size in (md,sm) {
+  @media (--break-$(size)) {
+    .$(size)-flex { display: flex; }
+    .$(size)-flex-none { flex: none; }
+    .$(size)-flex-wrap {flex-wrap: wrap}
+    .$(size)-flex-column {flex-direction: column}
+
+    @each $prop in (flex-start, flex-end, center, space-between, space-around, space-evenly) {
+      .$(size)-flex-item-justify-$(prop) { justify-self: $(prop); }
+      .$(size)-flex-justify-$(prop) { justify-content: $(prop); }
+    }
+
+    @each $prop in (auto, flex-start, flex-end, center, baseline, stretch) {
+      .$(size)-flex-item-align-$(prop) { align-self: $(prop); }
+      .$(size)-flex-align-$(prop) { align-items: $(prop); }
+    }
+
+    @for $i from 1 to 4 {
+      .$(size)-flex-grow-$(i) { flex-grow: $(i)}
+      .$(size)-flex-order-$(i) { order: $(i)}
+    }
+
+    @each $prop in (row, row-reverse, column, column-reverse) {
+      .$(size)-flex-direction-$(prop) {
+        flex-direction: $(prop)
+      }
+    }
+  }
+}
