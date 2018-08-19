@@ -1,38 +1,35 @@
 <template>
   <!-- eslint-disable -->
   <section>
-    <h4>Find Your Rally</h4>
+    <h3 class="bump normal">Find Your Rally</h3>
     <div>
       <input placeholder='Search for Rally by Title or summary'/>
       <button>All Categories<img src='../assets/svgs/ui/dropdown.svg' class='valign-wrapper'/></button>
     </div>
-    <div class="py3">
-      <div class="py1">
-        <div class="flex flex-wrap">
-          <div class="card_container" v-for='(rally, index) in rallies.data'>
-            <a class="bg-white hover-shadow extra" href="/" title="example">
-              <div v-bind:class="classBackground(rally.categories[0])">
-                <div class="flex flex-align-center padding_inside">
+    <div class="py-3">
+      <div class="m-neg-1 py-1">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="col-4 md-col-6 sm-col-12 mb-2 p-1" v-bind:class="classText(rally.categories[0])" v-for='(rally, index) in rallies.data'>
+              <a class="bg-white sh-1 hover-shadow block rounded overflow-hidden" href="/" title="example">
+                <div class="flex flex-align-center color-white px-2 py-1" v-bind:class="classBackground(rally.categories[0])">
+                  <!--<div class="flex flex-align-center padding_inside">-->
                   <div class="flex flex-align-center">
-                    <i class="categories-icon-justice icon_extra"></i>
-                    <div class="topcard">{{rally.categories[0]}}</div>
+                    <i class="inline-block line-height-1 categories-icon-justice"></i>
+                    <div class="small uppercase px-1 line-height-1 inline-block pt-05">{{rally.categories[0]}}</div>
+                  </div>
+                  <!--</div>-->
+                  <div class="ml-auto align-right small uppercase" name="cardheader">
+                    <div class="line-height-2" style="display:block;">{{rally.total_actions}}</div>
+                    <div class="line-height-2"> Actions</div>
                   </div>
                 </div>
-                <div class="custom_right">
-                  <div class="topright">{{rally.total_actions}}</div>
-                  <div class="topright"> Actions</div>
+                <div class="img_aspect">
+                  <img class="img-with-text" v-bind:src="rally.image_url"/>
                 </div>
-              </div>
-              <!--<div class="rally_text">{{rally.total_actions}} Actions</div>-->
-              <!--<div class="aspect aspect-3x2">-->
-              <!--  <div class="img-with-text" style="background-image: url('rally.image_url');"></div>-->
-              <!--</div>-->
-              <div class="img_aspect">
-                <img class="img-with-text" v-bind:src="rally.image_url"/>
-              </div>
-              <p v-bind:class="classText(rally.categories[0])">{{rally.title}}</p>
-              <!--<p class="rally_text">{{rally.title}}</p>-->
-            </a>
+                <p class="m-0 p-2 border-top">{{rally.title}}</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -167,26 +164,26 @@ export default {
     classBackground: function(arg){
       var theClass = '';
       if (arg === 'Arts & Culture' || arg === 'Public Safety' || arg === 'LGBTQ Rights' || arg === "Women's Rights") {
-        theClass = 'purplevue';
+        theClass = 'bg-purple';
       } else if (arg === "Children's Issues" || arg === "Economy" || arg === "Veteran's Issues") {
-        theClass = 'jadevue';
+        theClass = 'bg-jade';
       } else if (arg === 'Social Justice' || arg === 'Education' || arg === 'Environment' || arg === 'Media & Entertainment') {
-        theClass = 'tealvue';
+        theClass = 'bg-teal';
       } else {
-        theClass = 'orangevue';
+        theClass = 'bg-orange';
       }
       return theClass;
     },
     classText: function(arg){
       var theClass = '';
       if (arg === 'Arts & Culture' || arg === 'Public Safety' || arg === 'LGBTQ Rights' || arg === "Women's Rights") {
-        theClass = 'purplevuep';
+        theClass = 'rally-card-purple';
       } else if (arg === "Children's Issues" || arg === "Economy" || arg === "Veteran's Issues") {
-        theClass = 'jadevuep';
+        theClass = 'rally-card-jade';
       } else if (arg === 'Social Justice' || arg === 'Education' || arg === 'Environment' || arg === 'Media & Entertainment') {
-        theClass = 'tealvuep';
+        theClass = 'rally-card-teal';
       } else {
-        theClass = 'orangevuep';
+        theClass = 'rally-card-orange';
       }
       return theClass;
     }
@@ -196,15 +193,6 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-/* need index file which is node modules and looks like it is custom*/
-@import '../css/global/colors.css';
-@import '../css/global/containers.css';
-@import '../css/global/icons.css'; /* HERE */
-@import '../css/global/flexbox.css';
-@import '../css/global/rally-cards.css';
-/*@import '../css/global/page.css';*/
-@import '../css/global/typography.css';
-@import '../css/global/utilities.css';
 
 input, button{
   border: 2px solid #F0F0F0;
@@ -224,7 +212,7 @@ button{
   display: flex;
   justify-content: space-between;
 }
-div{
+div:not([name="cardheader"]){
   display: flex;
   justify-content: space-between;
 }
@@ -245,23 +233,7 @@ p{
 h4{
   font-size: 1.5rem;
 }
-.py3 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.py1 {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  margin: -.5rem;
-}
 
-.custom_right {
-  display: block;
-  text-align: right;
-  margin-left: auto;
-  font-size: .75rem;
-  text-transform: uppercase;
-}
 .startRally{
   background: #f95607;
   color: white;
@@ -275,40 +247,6 @@ h5{
   margin: 5% 0 2%;
 }
 
-.card_container {
-  padding: .5rem;
-  margin-bottom: 1rem;
-  width: 33.33333%;
-}
-
-.extra {
-  box-shadow: 0 1px 3px 1px rgba(0,0,0,.1);
-  display: block;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.padding_inside {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-.icon_extra {
-  line-height: 1;
-  display: inline-block;
-}
-
-.topcard {
-  line-height: 1;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: .75rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  padding-top: .25rem;
-  display: inline-block;
-}
 .img_aspect {
   position: relative;
   flex-direction: column;
@@ -336,66 +274,5 @@ h5{
     margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
-}
-.topright {
-  /*text-transform: uppercase;*/
-  color: #fff;
-  /*font-size: .75rem;*/
-  /*display: block;*/
-  line-height: 1.25;
-  
-}
-.purplevue { 
-  background-color: #800080;
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  padding-top: .5rem; 
-  padding-bottom: .5rem; 
-}
-.tealvue {
-  background-color: #2F6D87;
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  padding-top: .5rem; 
-  padding-bottom: .5rem; 
-}
-.jadevue {
-  background-color: #5bcbbc;
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  padding-top: .5rem; 
-  padding-bottom: .5rem; 
-}
-.orangevue {
-  background-color: #f95607;
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  padding-top: .5rem; 
-  padding-bottom: .5rem; 
-}
-
-.purplevuep { 
-  color: #800080;
-  /*border-top-style: solid;*/
-  margin: 0;
-  padding: 1rem;
-}
-.tealvuep {
-  color: #2F6D87;
-  /*border-top-style: solid;*/
-  margin: 0;
-  padding: 1rem;
-}
-.jadevuep {
-  color: #5bcbbc;
-  /*border-top-style: solid;*/
-  margin: 0;
-  padding: 1rem;
-}
-.orangevuep {
-  color: #f95607;
-  /*border-top-style: solid;*/
-  margin: 0;
-  padding: 1rem;
 }
 </style>

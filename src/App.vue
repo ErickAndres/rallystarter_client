@@ -21,7 +21,7 @@
  *  - State
  */
 import 'materialize-css';
-import 'materialize-css/dist/css/materialize.css';
+// import 'materialize-css/dist/css/materialize.css';
 import Navbar from './components/Navbar';
 import PageFooter from './components/Footer';
 
@@ -34,7 +34,18 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins'); /* In alphabetical order?*/
+@import './css/global/colors.css';
+@import './css/global/containers.css';
+@import './css/global/flexbox.css';
+/*@import './css/global/form-elements.css';*/
+@import './css/global/icons.css'; /* HERE */
+@import './css/global/page.css';
+@import './css/global/rally-cards.css';
+@import './css/global/typography.css';
+@import './css/global/utilities.css';
+@import '../node_modules/commons.css/lib/index.css';
+/*@import '../node_modules/materialize-css/dist/css/materialize.css'; causes conflicts with containers.css*/
 
 #app {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -46,8 +57,8 @@ export default {
 }
 *{
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  color: #4a4a4a;
   line-height: 1.5;
+  /*box-sizing: border-box;*/
 }
 body{
   color: #4a4a4a;

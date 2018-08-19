@@ -1,54 +1,54 @@
 @font-face {
   font-family: 'Material Icons';
-  src: local('/fonts/material/MaterialIcons-Regular'),
-       url('/fonts/material/MaterialIcons-Regular.woff2') format('woff2'),
-       url('/fonts/material/MaterialIcons-Regular.woff') format('woff'),
-       url('/fonts/material/MaterialIcons-Regular.ttf') format('truetype');
+  src: local('/static/fonts/material/MaterialIcons-Regular'),
+       url('/static/fonts/material/MaterialIcons-Regular.woff2') format('woff2'),
+       url('/static/fonts/material/MaterialIcons-Regular.woff') format('woff'),
+       url('/static/fonts/material/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Social Icons';
-  src: url('/fonts/social/social.eot');
-  src: url('/fonts/social/social.eot') format('embedded-opentype'),
-       url('/fonts/social/social.woff') format('woff'),
-       url('/fonts/social/social.ttf') format('truetype'),
-       url('/fonts/social/social.svg') format('svg');
+  src: url('/static/fonts/social/social.eot');
+  src: url('/static/fonts/social/social.eot') format('embedded-opentype'),
+       url('/static/fonts/social/social.woff') format('woff'),
+       url('/static/fonts/social/social.ttf') format('truetype'),
+       url('/static/fonts/social/social.svg') format('svg');
 }
 
 @font-face {
   font-family: 'Categories Icons';
-  src: url('/fonts/categories/categories.eot');
-  src: url('/fonts/categories/categories.eot') format('embedded-opentype'),
-       url('/fonts/categories/categories.woff') format('woff'),
-       url('/fonts/categories/categories.ttf') format('truetype'),
-       url('/fonts/categories/categories.svg') format('svg');
+  src: url('/static/fonts/categories/categories.eot');
+  src: url('/static/fonts/categories/categories.eot') format('embedded-opentype'),
+       url('/static/fonts/categories/categories.woff') format('woff'),
+       url('/static/fonts/categories/categories.ttf') format('truetype'),
+       url('/static/fonts/categories/categories.svg') format('svg');
 }
  
 @font-face {
   font-family: 'Targets Icons';
-  src: url('/fonts/targets/targets.eot');
-  src: url('/fonts/targets/targets.eot') format('embedded-opentype'),
-       url('/fonts/targets/targets.woff') format('woff'),
-       url('/fonts/targets/targets.ttf') format('truetype'),
-       url('/fonts/targets/targets.svg') format('svg');
+  src: url('/static/fonts/targets/targets.eot');
+  src: url('/static/fonts/targets/targets.eot') format('embedded-opentype'),
+       url('/static/fonts/targets/targets.woff') format('woff'),
+       url('/static/fonts/targets/targets.ttf') format('truetype'),
+       url('/static/fonts/targets/targets.svg') format('svg');
 }
 
 @font-face {
   font-family: 'Actions Icons';
-  src: url('/fonts/actions/actions.eot');
-  src: url('/fonts/actions/actions.eot') format('embedded-opentype'),
-       url('/fonts/actions/actions.woff') format('woff'),
-       url('/fonts/actions/actions.ttf') format('truetype'),
-       url('/fonts/actions/actions.svg') format('svg');
+  src: url('/static/fonts/actions/actions.eot');
+  src: url('/static/fonts/actions/actions.eot') format('embedded-opentype'),
+       url('/static/fonts/actions/actions.woff') format('woff'),
+       url('/static/fonts/actions/actions.ttf') format('truetype'),
+       url('/static/fonts/actions/actions.svg') format('svg');
 }
 
 @font-face {
   font-family: 'Allies Icons';
-  src: url('/fonts/allies/allies.eot');
-  src: url('/fonts/allies/allies.eot') format('embedded-opentype'),
-       url('/fonts/allies/allies.woff') format('woff'),
-       url('/fonts/allies/allies.ttf') format('truetype'),
-       url('/fonts/allies/allies.svg') format('svg');
+  src: url('/static/fonts/allies/allies.eot');
+  src: url('/static/fonts/allies/allies.eot') format('embedded-opentype'),
+       url('/static/fonts/allies/allies.woff') format('woff'),
+       url('/static/fonts/allies/allies.ttf') format('truetype'),
+       url('/static/fonts/allies/allies.svg') format('svg');
 }
 
 /* reference: https://material.io/icons/ */
