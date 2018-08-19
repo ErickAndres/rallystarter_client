@@ -38,8 +38,10 @@
       <button class="btn-ui">Show More</button>
       <div class="show_more">Showing 6 of 52</div>
     </div>
-    <img src='../assets/svgs/error-icons/ice-cream-cone.svg' class='icecreamCone'/>
-    <p>Sorry, none found. Try updating the categories or search term.</p>
+    <div v-if="rallies.data < 0">
+      <img src='../assets/svgs/error-icons/ice-cream-cone.svg' class='icecreamCone'/>
+      <p>Sorry, none found. Try updating the categories or search term.</p>
+    </div>
     <h5>Don't See What You're Looking For?</h5>
     <router-link to='/start/step1'><button class='startRally'>Start a Rally</button></router-link>
   </section>
