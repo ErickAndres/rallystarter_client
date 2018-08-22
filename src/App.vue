@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- REQUIRED: Add nav component-->
-    <navbar></navbar>
+    <Navbar></Navbar>
 
     <!-- OPTIONAL: Add site header component-->
     <!-- Add so that route components are rendered in <App /> -->
@@ -35,8 +35,10 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Poppins'); /* In alphabetical order?*/
+@import './css/global/buttons.css';
 @import './css/global/colors.css';
 @import './css/global/containers.css';
+@import './css/global/decorative.css';
 @import './css/global/flexbox.css';
 /*@import './css/global/form-elements.css';*/
 @import './css/global/icons.css'; /* HERE */
@@ -44,7 +46,7 @@ export default {
 @import './css/global/rally-cards.css';
 @import './css/global/typography.css';
 @import './css/global/utilities.css';
-@import '../node_modules/commons.css/lib/index.css';
+/*@import '../node_modules/commons.css/lib/index.css';*/
 /*@import '../node_modules/materialize-css/dist/css/materialize.css'; causes conflicts with containers.css*/
 
 #app {

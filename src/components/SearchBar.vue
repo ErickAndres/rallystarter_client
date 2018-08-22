@@ -1,10 +1,21 @@
 <template>
   <!-- eslint-disable -->
-  <section>
+  <section class="container px-2">
     <h3 class="bump normal">Find Your Rally</h3>
     <div>
-      <input placeholder='Search for Rally by Title or summary'/>
-      <button>All Categories<img src='../assets/svgs/ui/dropdown.svg' class='valign-wrapper'/></button>
+      <form class="flex flex-wrap">
+        <div class="pr-2 col-8 md-col-7 sm-col-12 sm-pr-0">
+          <input class="input-search" placeholder='Search for Rally by Title or summary'/>
+        </div>
+        <div class="col-4 md-col-5 sm-col-12 sm-mt-2">
+          <select class="col-12" name="categories[]">
+            <option value="all">All categories</option>
+            <option value="Animal Rights">Animal Rights</option>
+          </select>
+        </div>
+      </form>
+      <!--<input placeholder='Search for Rally by Title or summary'/>-->
+      <!--<button>All Categories<img src='../assets/svgs/ui/dropdown.svg' class='valign-wrapper'/></button>-->
     </div>
     <div class="py-3">
       <div class="m-neg-1 py-1">
@@ -15,35 +26,53 @@
                 <div class="flex flex-align-center color-white px-2 py-1" v-bind:class="classBackground(rally.categories[0])">
                   <!--<div class="flex flex-align-center padding_inside">-->
                   <div class="flex flex-align-center">
-                    <i class="inline-block line-height-1 categories-icon-justice"></i>
+                    <i class="inline-block line-height-1" v-bind:class="classIcon(rally.categories[0])"></i>
+                    <!--<i class="inline-block line-height-1 categories-icon-"></i> -->
                     <div class="small uppercase px-1 line-height-1 inline-block pt-05">{{rally.categories[0]}}</div>
                   </div>
                   <!--</div>-->
-                  <div class="ml-auto align-right small uppercase" name="cardheader">
-                    <div class="line-height-2" style="display:block;">{{rally.total_actions}}</div>
+                  <div class="ml-auto align-right small uppercase">
+                    <div class="line-height-2">{{rally.total_actions}}</div>
                     <div class="line-height-2"> Actions</div>
                   </div>
                 </div>
-                <div class="img_aspect">
-                  <img class="img-with-text" v-bind:src="rally.image_url"/>
+                <!--<div class="img_aspect">-->
+                <!--  <img class="img-with-text" v-bind:src="rally.image_url"/>-->
+                <!--</div>-->
+                <!--v-bind:style="{ backgroundImage: 'url(' + image + ')' }"-->
+                <!--v-bind:style="{ 'background-image': 'url(' + image + ')' }"-->
+                <!--:style="'background-image: url(' + backgroundImage + ')'"-->
+                <div class="aspect aspect-3x2">
+                  <div class="bg-cover" :style="'background-image: url(' + rally.image_url + ')'"></div>
                 </div>
+                <!--<div class="aspect aspect-3x2">-->
+                <!--  <div class="img-with-text" style="background-image: url('rally.image_url');"></div>-->
+                <!--</div>-->
                 <p class="m-0 p-2 border-top">{{rally.title}}</p>
               </a>
             </div>
           </div>
         </div>
+        <div class="px-1">
+          <div class="align-right">
+            <div>
+              <button class="btn-ui">Show More</button>
+              <div class="small color-grey pt-1">Showing 6 of 52</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="align-right">
-      <button class="btn-ui">Show More</button>
-      <div class="show_more">Showing 6 of 52</div>
     </div>
     <div v-if="rallies.data < 0">
       <img src='../assets/svgs/error-icons/ice-cream-cone.svg' class='icecreamCone'/>
       <p>Sorry, none found. Try updating the categories or search term.</p>
     </div>
-    <h5>Don't See What You're Looking For?</h5>
-    <router-link to='/start/step1'><button class='startRally'>Start a Rally</button></router-link>
+    <div class="pb-2">
+      <div class="container pt-4 pb-4 px-2 center">
+        <h3 class="h4 mt-0 pb-2 color-teal">Don't See What You're Looking For?</h3>
+        <a class='btn btn-main btn-large' href='/start/step1'>Start a Rally</a>
+      </div> 
+    </div>
   </section>
 </template>
 
@@ -188,6 +217,49 @@ export default {
         theClass = 'rally-card-orange';
       }
       return theClass;
+    },
+    classIcon: function(arg) {
+      var theClass = 'categories-icon-';
+      if (arg === "Animal Rights") {
+        theClass += 'paw';
+      } else if (arg === "Arts & Culture") {
+        theClass += 'arts';
+      } else if (arg === "Children's Issues") {
+        theClass += 'teddy';
+      } else if (arg === "Social Justice") {
+        theClass += 'justice';
+      } else if (arg === "Disaster Relief") {
+        theClass += 'ambulance';
+      } else if (arg === "Women's Rights") {
+        theClass += 'women';
+      } else if (arg === "Food & Agriculture") {
+        theClass += 'utensils';
+      } else if (arg === "Public Safety") {
+        theClass += 'safety';
+      } else if (arg === "Education") {
+        theClass += 'cap';
+      } else if (arg === "Environment") {
+        theClass += 'leaf';
+      } else if (arg === "Human Rights") {
+        theClass += 'human';
+      } else if (arg === "International Aid") {
+        theClass += 'aid';
+      } else if (arg === "Veteran's Issues") {
+        theClass += 'veterans';
+      } else if (arg === "Health") {
+        theClass += 'apple';
+      } else if (arg === "Food & Agriculture") {
+        theClass += 'utensils';
+      } else if (arg === "LGBTQ Rights") {
+        theClass += 'lgbtq';
+      } else if (arg === "Media & Entertainment") {
+        theClass += 'media';
+      } else if (arg === "Women's Rights") {
+        theClass += 'women';
+      } else {
+        theClass += arg.toLowerCase().trim();
+      }
+      return theClass;
     }
   },
 };
@@ -195,86 +267,4 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-
-input, button{
-  border: 2px solid #F0F0F0;
-  border-radius: 5px;
-}
-input{
-  width: 65%;
-  background: url('../assets/svgs/ui/search.svg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  text-indent: 5%;
-}
-button{
-  width: 30%;
-  padding: 1%;
-  height: 3.4rem;
-  display: flex;
-  justify-content: space-between;
-}
-div:not([name="cardheader"]){
-  display: flex;
-  justify-content: space-between;
-}
-section{
-  width: 80%;
-  margin: 0 auto;
-}
-img{
-  display: block;
-}
-.icecreamCone{
-    margin: 5% auto;
-}
-p{
-  text-align: center;
-  margin: 1% 0;
-}
-h4{
-  font-size: 1.5rem;
-}
-
-.startRally{
-  background: #f95607;
-  color: white;
-  border: 2px solid  #E7612C;
-  margin: 0 auto;
-  justify-content: center;
-  font-size: 1.2rem;
-}
-h5{
-  text-align: center;
-  margin: 5% 0 2%;
-}
-
-.img_aspect {
-  position: relative;
-  flex-direction: column;
-  /*max-height: 227.55px;*/
-}
-.img-with-text {
-    text-align: justify;
-    max-width:100%;
-    max-height:100%;
-}
-.show_more {
-  position: absolute; 
-  right: 11%;
-  color: grey;
-  font-size: .75rem;
-  padding-top: 60px;
-}
-.btn-ui {
-    position: absolute; 
-    right: 11%;
-    color: #686868;
-    background: #f7f7f7;
-    border-color: #f0f0f0;
-    width: 130px;
-    margin: 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-}
 </style>
