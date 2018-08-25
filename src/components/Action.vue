@@ -1,18 +1,27 @@
 <template>
-  <div>
-    <section>
-      <div>
-        <button>+ Add Action</button>
-        <button class="valign-wrapper">Target Type<img src="../assets/svgs/ui/dropdown.svg"/></button>
+  <fieldset class="mb-2 p-2" id="rally-setup-primary-target">
+      <div class="mt-2">
+        <div class="border rounded">
+          <div class="border-top p-2 bg-grey-light">
+            <button class="btn-ui">+ Add Action</button>
+            <a class="btn btn-ui pr-3 capitalize" data-open-button-dropdown="1" style="float:right;">
+              Target Type 
+              <i class="m-icon" data-open-button-dropdown="1">
+                keyboard_arrow_down
+              </i>
+            </a>
+          </div>
+          <div class="p-2">
+            <label for="sendInfo">Send to:</label>
+            <!-- On enter the Form Expands -->
+            <input type="text" class="formInput" placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
+          </div>
+        </div>
       </div>
-      <label for="sendInfo">Send to:</label>
-      <!-- On enter the Form Expands -->
-      <input type="text" class="formInput" placeholder="Search for individuals and groups or create your own targets" id="sendInfo" v-on:keypress.enter="actionForm = !actionForm"/>
-    </section>
     <div v-show="actionForm">
       <ActionDetails></ActionDetails>
     </div>
-  </div>
+  </fieldset>
 </template>
 
 <script>
@@ -30,49 +39,4 @@ export default {
 </script>
 
 <style scoped>
-section{
-  border: 2px solid #f0f0f0;
-  border-radius: 5px;
-}
-section div{
-  display: flex;
-  justify-content: space-between;
-  background: #F9F9F9;
-  height: 5rem;
-  border-bottom: 2px solid #f0f0f0;
-  margin-bottom: 2.5rem;
-}
-section label{
-  margin: 2%;
-  font-size: 1rem;
-  color: #979797;
-}
-input.formInput{
-  border-radius: 5px;
-  border: 1.5px solid #f0f0f0;
-  padding: 0.5rem 1rem;
-}
-button{
-  border: 2px solid #f0f0f0;
-  border-radius: 5px;
-  color: #979797;
-  padding: 1.15rem 4rem;
-}
-section button{
-  margin: 2.5%;
-  padding: 0.5rem 2rem;
-}
-#sendInfo{
-  width: 91%;
-  margin: 3% 2%;
-}
-@media screen and (max-width : 720px){
-  #sendInfo{
-    width: 85%;
-  }
-  section{
-    font-size: 0.9rem;
-  }
-}
-
 </style>

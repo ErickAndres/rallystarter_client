@@ -1,40 +1,47 @@
 <template>
-  <div class="formContainer">
-    <h4>Build Out Your Rally</h4>
-    <h5>To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.</h5>
-    <form>
-      <div>
-        <label>Add A Primary Action and Target</label>
+  <div>
+    <!-- current -->
+    <div class="center container color-purple">
+      <h3 class="sm-h3 boldest">Build Out Your Rally</h3>
+      <p class="container--narrow">To launch your Rally only one action and target is required but we recommend adding as many actions, targets and events as possible.</p>
+    </div> 
+    <!-- need this div?-->
+    <!--<div class="container--narrow mt-3 px-2 border-top pt-3">-->
+    <form class="pt-2 container--narrow border-top mt-3">
+        <label class="color-purple m-0">Add A Primary Action and Target</label>
         <p>Start with the most important action for supporters to take, along with all the targets associated with it.</p>
         <Action></Action>
-      </div>
-      <div class="moreAction">
-        <div class="sidebyside">
-          <div>
-            <label for="summary">Add more actions and targets</label>
-            <p>Adding more actions and targets improves your Rally's success.</p>
+        <fieldset class="border-top mb-2 p-2">
+          <div class="col-12 pt-3 pb-4 px-2 flex">
+            <div>
+              <label class="color-purple m-0" for="summary">Add more actions and targets</label>
+              <p>Adding more actions and targets improves your Rally's success.</p>
+            </div>
+            <div>
+              <button class="btn-ui">Add More</button>
+            </div>
           </div>
-          <button>Add More</button>
-        </div>
-      </div>
-      <div>
-        <div class="sidebyside">
-          <div>
-            <label>Add an event</label>
-            <p>Organize your supporters, online and in real-life.</p>
+        </fieldset>
+        <fieldset class="border-top mb-2 p-2">
+          <div class="col-12 pt-3 pb-4 px-2 flex"> 
+            <div>
+              <!-- normal one -->
+              <label>Add an event</label>
+              <p>Organize your supporters, online and in real-life.</p>
+            </div>
+            <div>
+              <button class="btn-ui" v-on:click="eventForm= !eventForm">Add Event</button>
+            </div>
           </div>
-          <!-- On Click on the button the Detailed Events Form expands -->
-          <button v-on:click="eventForm= !eventForm">Add Event</button>
-        </div>
-        <div v-show="eventForm">
-          <Event></Event>
-        </div>
+          <div v-show="eventForm">
+            <Event></Event>
+          </div>
+        </fieldset>
+      <div class="col-12 pt-3 pb-4 px-2">
+        <router-link to="/start/step1"><button class="btn-orange" style="width:100px;">Back</button></router-link>
+        <router-link to="/start/step3"><button class="btn-main" style="float:right;">Save and Continue</button></router-link>
       </div>
     </form>
-    <div class="actionButtons">
-      <router-link to="/start/step1"><button class="backButton">Back</button></router-link>
-      <router-link to="/start/step3"><button class="btn-main">Save and Continue</button></router-link>
-    </div>
   </div>
 </template>
 
@@ -61,80 +68,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.formContainer{
-  width: 50%;
-  margin: 0 auto;
-}
-h4{
-  text-align: center;
-  font-weight: 600;
-  font-size: 2.5rem;
-}
-h5{
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-}
-form{
-  border-top: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
-  padding: 2.5rem 0;
-}
-h6{
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 1rem;
-  color: #f0f0f0;
-  margin-bottom: 2.5rem;
-}
-
-label{
-  font-size: 1.8rem;
-  color: #4a4a4a;
-  font-weight: 600;
-}
-input{
-  border-radius: 5px;
-  border: 1.5px solid #f0f0f0;
-  padding: 0.5rem 1rem;
-}
-button{
-  border: 2px solid #f0f0f0;
-  border-radius: 5px;
-  color: #979797;
-  padding: 1.15rem 3rem;
-}
-section button{
-  margin: 2.5%;
-  padding: 0.5rem 2rem;
-}
-.btn-main{
-  background: #f95607;
-  color: white;
-}
-.backButton{
-  color: #E7612C;
-  border: 2px solid #E7612C;
-}
-.actionButtons{
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 0;
-}
-.moreAction{
-  margin: 5rem 0;
-  border-bottom: 2px solid #f0f0f0;
-  border-top: 2px solid #f0f0f0;
-  padding: 3rem 0;
-}
-.sidebyside{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-
-}
-.sidebyside button{
-  margin: .5rem 1rem;
-}
 @media screen and (max-width : 800px){
   .formContainer{
     width: 80%;

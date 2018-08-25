@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-3">
       <ProgressBar></ProgressBar>
       <router-view></router-view>
   </div>

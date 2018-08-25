@@ -1,183 +1,133 @@
 <template>
-  <div class="formContainer">
-    <h4>Ready, Set... Rally!</h4>
-    <h5>Get started by describing your Rally's goal and purpose.</h5>
-    <form>
-      <div>
-        <label for="title">Write Your Rally Title</label>
-        <p>Grab people's attention with a title that describes your campaign goal.</p>
-        <input type="text" class="formInput" placeholder="Rally Title" id="title"/>
-      </div>
-      <div>
-        <label for="summary">Write Your Rally Summary</label>
-        <p>Write 2-3 sentences about why you need to act now.</p>
-        <input type="text" class="formInput" placeholder="Rally Summary" id="summary"/>
-      </div>
-      <div>
-        <h6>Rally Details</h6>
-        <label>Choose Some Categories</label>
-        <p>Help Supporters Find Your Rally. Choose the categories that apply to your Rally. </p>
-        <section>
-          <div>
-            <div><input type="checkbox" value="Animal Rights" class="filled-in .check" id="animalRights"/><label for="animalRights" class="checkboxLabel">Animal Rights</label></div>
-            <div><input type="checkbox" value="Social Justice" class="filled-in" id="socialJustice"/><label for="socialJustice" class="checkboxLabel">Social Justice</label></div>
-            <div><input type="checkbox" value="Economy" class="filled-in" id="economy"/><label for="economy" class="checkboxLabel">Economy</label></div>
-            <div><input type="checkbox" value="Human Rights" class="filled-in" id="humanRights"/><label for="humanRights" class="checkboxLabel">Human Rights</label></div>
-            <div><input type="checkbox" value="Health" class="filled-in" id="health"/><label for="health" class="checkboxLabel">Health</label></div>
-            <div><input type="checkbox" value= "Media & Entertainment" class="filled-in" id="mediaEntertainment"/><label for="mediaEntertainment" class="checkboxLabel">Media & Entertainment</label></div>
-          </div>
-          <div>
-            <div><input type="checkbox" value="Arts & Culture" class="filled-in" id="artCulture"/><label for="artCulture" class="checkboxLabel">Arts & Culture</label></div>
-            <div><input type="checkbox" value="Disaster Relief" class="filled-in" id="disasterRelief"/><label for="disasterRelief" class="checkboxLabel">Disaster Relief</label></div>
-            <div><input type="checkbox" value="Education" class="filled-in" id="education"/><label for="education" class="checkboxLabel">Education</label></div>
-            <div><input type="checkbox" value="International Aid" class="filled-in" id="internationalAid"/><label for="internationalAid" class="checkboxLabel">International Aid</label></div>
-            <div><input type="checkbox" value="Food & Agriculture" class="filled-in" id="foodAgriculture"/><label for="foodAgriculture" class="checkboxLabel">Food & Agriculture</label></div>
-            <div><input type="checkbox" value="Politics" class="filled-in" id="politics"/><label for="politics" class="checkboxLabel">Politics</label></div>
-          </div>
-          <div>
-            <div><input type="checkbox" value="Children's Issues" class="filled-in" id="children"/><label for="children" class="checkboxLabel">Children's Issues</label></div>
-            <div><input type="checkbox" value="Public Safety" class="filled-in" id="publicSafety"/><label  for="publicSafety" class="checkboxLabel">Public Safety</label></div>
-            <div><input type="checkbox" value="Environment" class="filled-in" id="environment"/><label for="environment" class="checkboxLabel">Environment</label></div>
-            <div><input type="checkbox" value="Veteran Issues" class="filled-in" id="veteranIssues"/><label for="veteranIssues" class="checkboxLabel">Veteran Issues</label></div>
-            <div><input type="checkbox" value="LGBTQ Rights" class="filled-in" id="LGBTQRights"/><label for="LGBTQRights" class="checkboxLabel">LGBTQ Rights</label></div>
-            <div><input type="checkbox" value="Women Rights" class="filled-in" id="womenRights"/><label for="womenRights" class="checkboxLabel">Women Rights</label></div>
-          </div>
-        </section>
-      </div>
-      <div>
-        <label>Upload a Rally Image*</label>
-        <p>Add some flair to your Rally. Upload an impactful image.</p>
-        <button id="imageUploader">Upload Image</button>
-      </div>
-      <div>
-        <label for="videoLink">Have a Video?</label>
-        <p>Add Youtube Video URL. This is optional and will replace your Rally Image.</p>
-        <input type="text" class="formInput" placeholder="URL" id="videoLink"/>
-      </div>
-    </form>
-    <div class="actionButtons">
-      <!--<router-link to="/start/step1"><button class="backButton">Back</button></router-link>-->
-      <router-link to="/start/step2"><button class="btn-main">Save and Continue</button></router-link>
+  <div>
+    <div class="center container color-purple">
+      <h2 class="sm-h3 boldest">Ready, Set... Rally!</h2>
+      <h5 class="sm-h5">Get started by describing your Rally's goal and purpose.</h5>
     </div>
+    <form class="pt-2 container--narrow border-top mt-3">
+      <fieldset class="mb-2 p-2" id="rally-setup-title">
+        <div><label>Rally title *</label>
+          <p class="caption">Grab people's attention with a title that describes your goal</p>
+        </div><input name="title" placeholder="Rally title">
+        <div>
+          <p class="small m-0 align-right pt-1 color-grey">65 characters left</p>
+        </div>
+      </fieldset>
+      <fieldset class="mb-2 p-2" id="rally-setup-summary">
+        <div><label>Rally summary *</label>
+          <p class="caption">2 – 3 sentences about why people should care about your Rally</p>
+        </div>
+        <div class="mt-2"><textarea name="summary" rows="4" placeholder="Rally summary"></textarea></div>
+      </fieldset>
+      <fieldset class="mb-2 p-2" id="rally-setup-categories">
+        <div><label>Choose categories *</label>
+          <p class="caption">Help supporters find your Rally by choosing categories</p>
+        </div>
+        <div class="mt-2">
+          <div class="flex flex-wrap">
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="animalRights" value="Animal Rights" name="categories[]"><label for="animalRights">Animal Rights</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="artCulture" value="Arts &amp; Culture" name="categories[]"><label for="artCulture">Arts &amp; Culture</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="children" value="Children's Issues" name="categories[]"><label for="children">Children's Issues</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="" value="Social Justice" name="categories[]"><label for="">Social Justice</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="disasterRelief" value="Disaster Relief" name="categories[]"><label for="disasterRelief">Disaster Relief</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="publicSafety" value="Public Safety" name="categories[]"><label for="publicSafety">Public Safety</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="" value="Economy" name="categories[]"><label for="">Economy</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="education" value="Education" name="categories[]"><label for="education">Education</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="environment" value="Environment" name="categories[]"><label for="environment">Environment</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="" value="Human Rights" name="categories[]"><label for="">Human Rights</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="internationalAid" value="International Aid" name="categories[]"><label for="internationalAid">International Aid</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="veteranIssues" value="Veteran's Issues" name="categories[]"><label for="veteranIssues">Veteran's Issues</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="" value="Health" name="categories[]"><label for="">Health</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="foodAgriculture" value="Food &amp; Agriculture" name="categories[]"><label for="foodAgriculture">Food &amp; Agriculture</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="LGBTQRights" value="LGBTQ Rights" name="categories[]"><label for="LGBTQRights">LGBTQ Rights</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="mediaEntertainment" value="Media &amp; Entertainment" name="categories[]"><label for="mediaEntertainment">Media &amp; Entertainment</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="politics" value="Politics" name="categories[]"><label for="politics">Politics</label></div>
+            </div>
+            <div class="col-4 md-col-6 mb-1 pr-1">
+              <div><input type="checkbox" id="womenRights" value="Women's Rights" name="categories[]"><label for="womenRights">Women's Rights</label></div>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+        <fieldset class="mb-2 p-2" id="rally-setup-image">
+          <div><label>Rally header image *</label>
+            <p class="caption">Choose a file less than 5MB</p>
+          </div>
+          <div class="mt-2">
+            <div>
+              <div class="aspect aspect-2x1">
+                <div class="bg-cover bg-center bg-grey-light bg-contain" style="background-image: url(&quot;/svgs/ui/photo.svg&quot;);"></div>
+              </div>
+              <div class="mt-2"><label class="btn btn-ui inline-block" for="0.7653952149817094">Add image</label><input type="file" accept=".jpg, .jpeg, .png" id="0.7653952149817094" class="hide"><input type="hidden" name="image_data"></div>
+              <div class="z-4 bg-white left-0 top-0 fixed width-full height-full max-height-full overflow-auto invisible"
+                data-fade="out"><i class="m-icon fixed z-2 top-0 right-0 p-2 h3 cursor-pointer">close</i>
+                <div>
+                  <div class="vertically-center width-full">
+                    <div class="max-width-2 mx-auto">
+                      <div></div>
+                      <div class="mt-2"><a class="btn btn-ui">Crop image</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="mb-2 p-2" id="rally-setup-video">
+          <label>Youtube video (optional)</label>
+          <input name="youtube_video_url">
+        </fieldset>
+        <div class="col-12 pt-3 pb-4 px-2">
+          <router-link to="/start/step1"><button class="btn-orange" style="width:100px;">Back</button></router-link>
+          <router-link to="/start/step2"><button class="btn-main" style="float:right;">Save and Continue</button></router-link>
+          <!--<button class="btn-main">Save and Continue</button>-->
+        </div>
+    </form>
   </div>
 </template>
 
 <script>
-
-
-export default {
-  name: 'RallyFormStep1',
-  data() {
-    return {
-    };
-  },
-};
-
+  export default {
+    name: 'RallyFormStep1',
+    data() {
+      return {};
+    },
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-section{
-  display: flex;
-}
-div{
-  margin-top: 1.5rem;
-}
-section div{
-  display: flex;
-  flex-direction: column;
-  margin: 2%;
-}
-
-.formContainer{
-  width: 50%;
-  margin: 0 auto;
-}
-h4{
-  text-align: center;
-  font-weight: 600;
-  font-size: 2.5rem;
-}
-h5{
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-form{
-  border-top: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
-  padding: 2.5rem 0;
-}
-h6{
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 1rem;
-  color: #f0f0f0;
-  margin-bottom: 2.5rem;
-}
-label{
-  font-size: 1.8rem;
-  color: #4a4a4a;
-  font-weight: 600;
-}
-input.formInput{
-  border-radius: 5px;
-  border: 1.5px solid #f0f0f0;
-  padding: .5rem;
-}
-button{
-  border-color: #E7612C;
-  border-radius: 5px;
-  padding: 1.15rem 4rem;
-}
-.btn-main{
-  background: #f95607;
-  color: white;
-}
-.backButton{
-  color: #E7612C;
-  border: 2px solid #E7612C;
-}
-.actionButtons{
-  display: flex;
-  justify-content: flex-end;
-  margin: 2rem 0;
-}
-.checkboxLabel{
-  font-size: 1rem;
-  color: #989898;
-  font-weight: 400;
-}
-section div div{
-  height: 3rem;
-}
-.filled-in .check{
-  border: 1.5px solid #989898;
-}
-
-[type="checkbox"].check{
-  border: 1.5px solid #989898;
-  background: #79F1CC !important;
-}
-#imageUploader{
-  margin: 2rem 0;
-  width: 65%;
-  height: 250px;
-  background: #F9F9F9;
-  text-align: center;
-  color: #979797;
-  border: 1.5px solid #f0f0f0;
-}
-@media screen and (max-width : 800px){
-  .formContainer{
-    width: 80%;
-  }
-}
-@media screen and (max-width : 515px){
-  .actionButtons{
-    font-size: 0.9rem;
-  }
-  .btn-main{
-    padding: 1.2rem 2rem;
-    border: 2px solid #E7612C;
-  }
-}
 </style>

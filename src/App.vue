@@ -46,7 +46,7 @@ export default {
 @import './css/global/rally-cards.css';
 @import './css/global/typography.css';
 @import './css/global/utilities.css';
-/*@import '../node_modules/commons.css/lib/index.css';*/
+@import '../node_modules/commons.css/lib/index.css';
 /*@import '../node_modules/materialize-css/dist/css/materialize.css'; causes conflicts with containers.css*/
 
 #app {
