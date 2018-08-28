@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="center container color-purple">
-      <h2 class="sm-h3 boldest">Ready, Set... Rally!</h2>
-      <h5 class="sm-h5">Get started by describing your Rally's goal and purpose.</h5>
+    <div class="center container--narrow-larger color-purple">
+      <h3 class="sm-h3 boldest">Ready, Set... Rally!</h3>
+      <p class="mb-0 bump max-width-4 mx-auto">Get started by describing your Rally's goal and purpose.</p>
     </div>
     <form class="pt-2 container--narrow border-top mt-3">
       <fieldset class="mb-2 p-2" id="rally-setup-title">
@@ -110,9 +110,9 @@
           <label>Youtube video (optional)</label>
           <input name="youtube_video_url">
         </fieldset>
-        <div class="col-12 pt-3 pb-4 px-2">
-          <router-link to="/start/step1"><button class="btn-orange" style="width:100px;">Back</button></router-link>
-          <router-link to="/start/step2"><button class="btn-main" style="float:right;">Save and Continue</button></router-link>
+        <div class="border-top col-12 pt-3 pb-4 px-2">
+          <router-link to="/start/step1"><button class="btn-orange col-2">Back</button></router-link>
+          <router-link to="/start/step2"><button class="btn-main col-right">Save and Continue</button></router-link>
           <!--<button class="btn-main">Save and Continue</button>-->
         </div>
     </form>

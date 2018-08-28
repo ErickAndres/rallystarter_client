@@ -23,15 +23,16 @@
                   <a href="/other" class="hover-underline">
                     {{help_link.title}}
                   </a>
-                  <!--<p>{{help_link.title}}</p>-->
               </li>
           </ul>
       </div>
       <form class="pr-5 md-pr-0 col-4">
-        <h3 class='h5 normal mt-0 opacity-075 boldest'>For Updates & Inspiration</h3>
-        <input type="text" placeholder="Name" class="formInput" v-model="name"/>
-        <input type="email" placeholder="Email" class="formInput" v-model="email"/>
-        <button @click="newsletterSubmit">Subscribe</button>
+        <div>
+          <h5 class='h5 normal mt-0 opacity-075 boldest mb-2'>For Updates & Inspiration</h5>
+          <input type="text" placeholder="Name" class="mb-2" v-model="name"/>
+          <input type="email" placeholder="Email" class="mb-2" v-model="email"/>
+          <button @click="newsletterSubmit">Subscribe</button>
+        </div>
       </form>
       <div class="pr-5 md-pr-0">
         <a class="bg-facebook social-circle m-05" target="_blank" href="https://www.facebook.com/rallystarter" title="https://www.facebook.com/rallystarter">
